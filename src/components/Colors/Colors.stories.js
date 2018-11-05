@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react';
 import { storiesOf } from '@storybook/react';
+import { withInfo } from '@storybook/addon-info';
 import { Colors } from './Colors';
 
 let stories = storiesOf('Atoms/Global/Colors', module);
