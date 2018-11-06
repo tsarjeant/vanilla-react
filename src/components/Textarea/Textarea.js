@@ -5,7 +5,7 @@ export class Textarea extends Component {
 
     render() {                
         return (
-            <textarea placeholder="{{ placeholder }}"></textarea>
+            <textarea placeholder={ this.props.placeholder }></textarea>
         );
     }
 }
