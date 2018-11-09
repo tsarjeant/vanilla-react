@@ -6,7 +6,7 @@ export class CardList extends Component {
     render() {
         return (
             <ul className="c-card-list">
-                {this.props.listItems.map(function(listItem, index) {
+                {this.props.cardListItems.map(function(listItem, index) {
                     return (
                         <Card
                             key={`c-card-${index}`}
