@@ -1,18 +1,37 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
+import { Field } from "../Field/Field";
+import { TextInput } from "../TextInput/TextInput";
 
 export class TextField extends Component {
+	render() {
+		return (
+			<Field
+				id={this.props.id}
+				label={this.props.label}
+				required={this.props.required}
+				fieldNote={this.props.fieldNote}
+			>
+				<TextInput
+					type={this.props.type}
+					id={this.props.id}
+					name={this.props.name}
+					placeholder={this.props.placeholder}
+				/>
+			</Field>
+		);
+	}
+}
 
-    render() {
-        return (
-            <div className="c-field">
-                <label htmlFor={this.props.name} className="c-field__label ">{this.props.label}{(this.props.required) ? "*" : null}</label>
-                <div className="c-field__body">
-                    <input type={this.props.type} id={this.props.name} className="c-input " name={this.props.name} required={this.props.required} placeholder={this.props.placeholder } title={this.props.title} />
-                </div>
-                {this.props.fieldNote &&
-                    <div className="c-field__note">{this.props.fieldNote}</div>
-                }
-            </div>
-        )
-    }
+TextField.propTypes = {
+	id: PropTypes.string,
+	name: PropTypes.string,
+	label: PropTypes.string,
+	fieldNote: PropTypes.string
+};
+
+TextField.defaultProps = {
+	id: "textarea-field-1",
+	label: "Fart",
+	fieldNote: "This is a fieldnote."
 };

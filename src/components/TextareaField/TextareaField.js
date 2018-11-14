@@ -1,20 +1,15 @@
 import React, { Component } from "react";
 import PropTypes from 'prop-types';
-import { Textarea } from '../Textarea/Textarea'
+import { Field } from '../Field/Field';
+import { Textarea } from '../Textarea/Textarea';
 
 export class TextareaField extends Component {
 
     render() {                
         return (
-            <div className="c-field">
-                <label for={ this.props.id } class="c-field__label">{ this.props.label }</label>
-                <div className="c-field__body">
-                    <Textarea />
-                </div>
-                {this.props.fieldNote &&
-                    <div className="c-field__note">{this.props.fieldNote}</div>
-                }
-            </div>
+            <Field id={ this.props.id } label={ this.props.label } required={this.props.required} fieldNote={ this.props.fieldNote } >
+                <Textarea id={ this.props.id } />
+            </Field>
         );
     }
 }
@@ -27,6 +22,6 @@ TextareaField.propTypes = {
 
 TextareaField.defaultProps = {
     id: "textarea-field-1",
-    label: "Label",
+    label: "Fart",
     fieldNote: "This is a fieldnote."
 };

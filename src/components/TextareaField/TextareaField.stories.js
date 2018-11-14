@@ -1,9 +1,9 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { TextareaField } from './TextareaField';
 
 let stories = storiesOf('Molecules/Forms/TextareaField', module);
 
 stories.add('Default', () =>
-    <TextareaField />
+    <TextareaField label="LLLLLLLABEL" fieldNote="This is a field note" />
 );

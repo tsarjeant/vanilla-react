@@ -13,9 +13,17 @@
  * Field label
  */
 .c-field__label {
-	margin-bottom: 0.5rem;
+	margin-bottom: 0.2rem;
     font-size: $font-size-med;
     font-weight: bold;
+}
+
+/**
+ * Field label
+ */
+ .c-field__required {
+    color: $color-utility-error;
+    text-decoration: none;
 }
 
 /**
@@ -23,6 +31,7 @@
  */
 .c-field__body {
     position: relative;
+    margin-bottom: 0.2rem;
 }
 
 /**
