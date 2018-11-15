@@ -1,0 +1,19 @@
+/*------------------------------------*\
+    #INPUT
+\*------------------------------------*/
+
+/**
+ * 1) Input of a form (textarea or text input)
+ */
+.c-input {
+	.c-field.is-disabled & {
+		background: $color-gray-07;
+
+		&:hover {
+			cursor: not-allowed;
+		}
+	}
+	.c-field.has-error & {
+		border: 1px solid $color-utility-error;
+	}
+}

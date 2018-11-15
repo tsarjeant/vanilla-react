@@ -1,4 +1,4 @@
- /*------------------------------------*\
+/*------------------------------------*\
     #TABLE OF CONTENTS
 \*------------------------------------*/
 /**
@@ -15,10 +15,6 @@
 @import "scss/abstracts/variables";
 @import "scss/abstracts/mixins";
 
-
-
-
-
 /*------------------------------------*\
     #BASE
 \*------------------------------------*/
@@ -34,72 +30,61 @@
 @import "scss/base/text";
 @import "scss/base/table";
 
-
-
-
-
 /*------------------------------------*\
     #LAYOUT
 \*------------------------------------*/
 @import "scss/layout/layout";
-
-
-
-
 
 /*------------------------------------*\
     #COMPONENTS
 \*------------------------------------*/
 
 /**
- * Global 
+ * Global
  */
 @import "scss/components/footer";
 @import "scss/components/header";
 @import "scss/components/logo";
 
 /**
- * Page 
+ * Page
  */
 @import "scss/components/section";
 @import "scss/components/page-header";
 
 /**
- * Navigation 
+ * Navigation
  */
 @import "scss/components/primary-nav";
 
 /**
- * Forms 
+ * Forms
  */
 @import "scss/components/field";
 @import "scss/components/buttons";
 @import "scss/components/inline-form";
+@import "scss/components/input";
 
 /**
- * Blocks 
+ * Blocks
  */
 @import "scss/components/card";
 @import "scss/components/hero";
 
 /**
- * Images 
+ * Images
  */
 @import "scss/components/icon";
 
 /**
- * Text 
+ * Text
  */
 @import "scss/components/text-passage";
 
 /**
- * Lists 
+ * Lists
  */
- @import "scss/components/card-list";
-
-
-
-
+@import "scss/components/card-list";
 
 /*------------------------------------*\
     #UTILITIES

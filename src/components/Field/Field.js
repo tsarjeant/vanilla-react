@@ -1,11 +1,16 @@
 import React, { Component } from "react";
+import classnames from "classnames";
 import PropTypes from "prop-types";
 import { Label } from "../Label/Label";
 
 export class Field extends Component {
 	render() {
+		const fieldClass = classnames("c-field", this.props.className, {
+			"has-error": this.props.hasError,
+			"is-disabled": this.props.disabled
+		});
 		return (
-			<div className="c-field">
+			<div className={fieldClass}>
 				<Label
 					htmlFor={this.props.id}
 					labelText={this.props.label}
@@ -28,11 +33,13 @@ export class Field extends Component {
 Field.propTypes = {
 	id: PropTypes.string,
 	label: PropTypes.string,
-	fieldNote: PropTypes.string
+	fieldNote: PropTypes.string,
+	required: PropTypes.bool,
+	children: PropTypes.node
 };
 
 Field.defaultProps = {
 	id: "textarea-field-1",
-	label: "Fart",
+	label: "Label",
 	fieldNote: "This is a fieldnote."
 };

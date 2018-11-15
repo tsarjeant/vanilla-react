@@ -5,8 +5,8 @@
 /**
  * 1) Consists of a label, form control, and an optional note about the field.
  */
- .c-field {
-	margin-bottom: $spacing-large;	
+.c-field {
+	margin-bottom: $spacing-large;
 }
 
 /**
@@ -14,31 +14,35 @@
  */
 .c-field__label {
 	margin-bottom: 0.2rem;
-    font-size: $font-size-med;
-    font-weight: bold;
+	font-size: $font-size-med;
+	font-weight: bold;
 }
 
 /**
  * Field label
  */
- .c-field__required {
-    color: $color-utility-error;
-    text-decoration: none;
+.c-field__required {
+	color: $color-utility-error;
+	text-decoration: none;
 }
 
 /**
  * Field body
  */
 .c-field__body {
-    position: relative;
-    margin-bottom: 0.2rem;
+	position: relative;
+	margin-bottom: 0.2rem;
 }
 
 /**
  * Field note
  */
 .c-field__note {
-    display: inline-block;
-    font-size: $font-size-sm;
-    color: $color-gray-50;
+	display: inline-block;
+	font-size: $font-size-sm;
+	color: $color-gray-50;
+
+	.c-field.has-error & {
+		color: $color-utility-error;
+	}
 }

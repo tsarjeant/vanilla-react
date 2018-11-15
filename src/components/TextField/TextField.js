@@ -9,6 +9,8 @@ export class TextField extends Component {
 			<Field
 				id={this.props.id}
 				label={this.props.label}
+				hasError={this.props.hasError}
+				disabled={this.props.disabled}
 				required={this.props.required}
 				fieldNote={this.props.fieldNote}
 			>
@@ -17,6 +19,8 @@ export class TextField extends Component {
 					id={this.props.id}
 					name={this.props.name}
 					placeholder={this.props.placeholder}
+					disabled={this.props.disabled}
+					aria-describedby={this.props.ariaDescribedBy}
 				/>
 			</Field>
 		);
@@ -27,11 +31,14 @@ TextField.propTypes = {
 	id: PropTypes.string,
 	name: PropTypes.string,
 	label: PropTypes.string,
-	fieldNote: PropTypes.string
+	fieldNote: PropTypes.string,
+	required: PropTypes.bool,
+	ariaDescribedBy: PropTypes.string
 };
 
 TextField.defaultProps = {
-	id: "textarea-field-1",
-	label: "Fart",
-	fieldNote: "This is a fieldnote."
+	id: "text-field-1",
+	label: "Label",
+	fieldNote: "This is a fieldnote.",
+	ariaDescribedBy: "text-field"
 };

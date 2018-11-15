@@ -29,6 +29,5 @@ Label.propTypes = {
 }
 
 Label.defaultProps = {
-    required: false,
     labelText: 'Label'
 }
