@@ -12,19 +12,3 @@ stories.addDecorator(withInfo).addDecorator(withSmartKnobs).addDecorator(withKno
 stories.add('Default', () =>
     <TextInput />
 );
-
-stories.add('Disabled', () =>
-    <TextInput
-        disabled
-     />
-);
-stories.add('Read Only', () =>
-    <TextInput
-        readOnly
-     />
-);
-stories.add('Required', () =>
-    <TextInput
-        required
-     />
-);

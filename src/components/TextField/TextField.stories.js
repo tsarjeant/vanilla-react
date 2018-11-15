@@ -1,9 +1,13 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
+import { withInfo } from '@storybook/addon-info';
+import { withKnobs } from '@storybook/addon-knobs/react';
+import { withSmartKnobs } from 'storybook-addon-smart-knobs';
 import { TextField } from "./TextField";
-import { TextInput } from "../TextInput/TextInput";
 
 let stories = storiesOf("Molecules/Forms/TextField", module);
+
+stories.addDecorator(withInfo).addDecorator(withSmartKnobs).addDecorator(withKnobs);
 
 stories.add("Default", () => (
 	<TextField

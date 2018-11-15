@@ -12,18 +12,3 @@ stories.addDecorator(withInfo).addDecorator(withSmartKnobs).addDecorator(withKno
 stories.add('Default', () =>
     <Textarea />
 );
-stories.add('Disabled', () =>
-    <Textarea
-        disabled
-     />
-);
-stories.add('Read Only', () =>
-    <Textarea
-        readOnly
-     />
-);
-stories.add('Required', () =>
-    <Textarea
-        required
-     />
-);

@@ -1,9 +1,13 @@
 import React, { PropTypes } from 'react';
 import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
+import { withKnobs } from '@storybook/addon-knobs/react';
+import { withSmartKnobs } from 'storybook-addon-smart-knobs';
 import { Colors } from './Colors';
 
 let stories = storiesOf('Atoms/Global/Colors', module);
+
+stories.addDecorator(withInfo).addDecorator(withSmartKnobs).addDecorator(withKnobs);
 
 stories.add('Brand Colors', () =>
   <Colors
