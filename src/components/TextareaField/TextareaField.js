@@ -15,9 +15,15 @@ export class TextareaField extends Component {
                 fieldNote={this.props.fieldNote}
 			>
 				<Textarea 
-                    id={this.props.id} 
-                    disabled={this.props.disabled}
-                    aria-describedby={this.props.ariaDescribedBy}
+					type={this.props.type}
+					id={this.props.id}
+					name={this.props.name}
+					value={this.props.value}
+					placeholder={this.props.placeholder}
+					disabled={this.props.disabled}
+					readOnly={this.props.readOnly}
+					required={this.props.required}
+					aria-describedby={this.props.ariaDescribedBy}
                 />
 			</Field>
 		);
@@ -26,9 +32,15 @@ export class TextareaField extends Component {
 
 TextareaField.propTypes = {
 	id: PropTypes.string,
+	name: PropTypes.string,
 	label: PropTypes.string,
 	fieldNote: PropTypes.string,
-	required: PropTypes.bool
+	required: PropTypes.bool,
+	disabled: PropTypes.bool,
+	readOnly: PropTypes.bool,
+	ariaDescribedBy: PropTypes.string,
+	hasError: PropTypes.bool,
+	value: PropTypes.string
 };
 
 TextareaField.defaultProps = {

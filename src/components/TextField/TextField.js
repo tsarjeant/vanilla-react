@@ -18,8 +18,11 @@ export class TextField extends Component {
 					type={this.props.type}
 					id={this.props.id}
 					name={this.props.name}
+					value={this.props.value}
 					placeholder={this.props.placeholder}
 					disabled={this.props.disabled}
+					readOnly={this.props.readOnly}
+					required={this.props.required}
 					aria-describedby={this.props.ariaDescribedBy}
 				/>
 			</Field>
@@ -29,11 +32,30 @@ export class TextField extends Component {
 
 TextField.propTypes = {
 	id: PropTypes.string,
+	type: PropTypes.oneOf([
+		"text",
+		"password",
+		"datetime",
+		"datetime-local",
+		"date",
+		"month",
+		"time",
+		"week",
+		"number",
+		"email",
+		"url",
+		"search",
+		"tel"
+	]),
 	name: PropTypes.string,
 	label: PropTypes.string,
 	fieldNote: PropTypes.string,
 	required: PropTypes.bool,
-	ariaDescribedBy: PropTypes.string
+	disabled: PropTypes.bool,
+	readOnly: PropTypes.bool,
+	ariaDescribedBy: PropTypes.string,
+	hasError: PropTypes.bool,
+	value: PropTypes.string
 };
 
 TextField.defaultProps = {
