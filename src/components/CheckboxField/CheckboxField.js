@@ -1,40 +1,28 @@
 import React, { Component } from "react";
 import PropTypes from 'prop-types';
+import { Field } from '../Field/Field';
+import { OptionList } from '../OptionList/OptionList';
 
 export class CheckboxField extends Component {
 
     render() {
+        const fieldClass = '';
+        
         return (
-            <div className={"c-field " + this.props.styleModifier }>
-
-                <h4 className="c-field__label">{ this.props.heading}</h4>
-
-                <div className="c-field__body">
-
-                    <ul className="c-option-list">
-
-                    {this.props.listItems.map(function(listItem){
-                        return (
-                            <li className="c-option-list__item">
-
-                                <label className="c-input-group" for={listItem.id}>
-                                    <input id={listItem.id} type="checkbox" name={listItem.name} value={ listItem.value } className="c-input-group__control"  checked={listItem.checked} disabled={listItem.disabled} readonly={listItem.readonly} />
-                                    <span className="c-input-group__text">{ listItem.text }</span>
-                                </label>
-
-                            </li>
-                        )
-                    })}
-
-                    </ul>
-
-                </div>
-
-                {this.props.fieldNote &&
-                    <div className="c-field__note">{this.props.fieldNote}</div>
-                }
-
-            </div>
+            <Field
+				className={fieldClass}
+				id={this.props.id}
+				label={this.props.label}
+				hasError={this.props.hasError}
+				disabled={this.props.disabled}
+				required={this.props.required}
+				fieldNote={ this.props.fieldNote }
+				title={ this.props.title }
+			>
+                <OptionList
+                    listItems={this.props.listItems}
+                 />
+            </Field>
         )
     }
 };
@@ -44,17 +32,20 @@ CheckboxField.defaultProps = {
         {
           "id": "checkbox-1",
           "name": "checkbox-example",
-          "text": "Checkbox 1"
+          "text": "Checkbox 1",
+          "type": "checkbox"
         },
         {
           "id": "checkbox-2",
           "name": "checkbox-example",
-          "text": "Checkbox 2"
+          "text": "Checkbox 2",
+          "type": "checkbox"
         },
         {
           "id": "checkbox-3",
           "name": "checkbox-example",
-          "text": "Checkbox 3"
+          "text": "Checkbox 3",
+          "type": "checkbox"
         }
     ]
 }
