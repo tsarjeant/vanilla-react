@@ -5,6 +5,9 @@
 /**
  * 1) Container that consists of of a page header title and description
  */
+.c-page-header {
+	margin-bottom: 2rem;
+}
 
 /**
  * Page header title
@@ -17,5 +20,5 @@
  * Page description
  */
 .c-page-header__desc {
-    margin-bottom: 2rem;
+	margin-bottom: 0;
 }
