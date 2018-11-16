@@ -719,7 +719,7 @@ tr {
   .c-field.is-disabled .c-input:hover {
     cursor: not-allowed; }
 .c-field.has-error .c-input {
-  border: 1px solid #b12a0b; }
+  border: 2px solid #b12a0b; }
 
 /**
  * Blocks
