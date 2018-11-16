@@ -11,14 +11,21 @@ export class TextField extends Component {
 		this.state = {
 			email: '',
 			valid: true,
-			title: "This is a field note."
+			fieldNote: "This is a field note."
 		}
 		this.handleEmailChange = this.handleEmailChange.bind(this)
+		this.handleOnBlur = this.handleOnBlur.bind(this)
 	}
 
 	validateEmail (email) {
 		const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 		return re.test(email)
+	}
+	
+	handleOnBlur(e) {
+		if(this.props.required && this.state.email == '' ) {
+			alert("This field is required")
+	   }
 	}
 
 	handleEmailChange(e) {
@@ -34,14 +41,14 @@ export class TextField extends Component {
 	render() {
 		
 		let fieldClass = ''
-	    const { email, valid } = this.state
+	    const { email, valid, fieldNote } = this.state
 	    
 	    if (this.props.type == "email" && !valid) {
 	      fieldClass += ' has-error'
-		  this.state.title = "Please enter a valid email address."
+		  this.state.fieldNote = "Please enter a valid email address."
 	    }
 		else {
-			this.state.title = "This is a field note."
+			this.state.fieldNote = "This is a field note."
 		}
 		
 		return (
@@ -52,7 +59,7 @@ export class TextField extends Component {
 				hasError={this.props.hasError}
 				disabled={this.props.disabled}
 				required={this.props.required}
-				fieldNote={this.state.title}
+				fieldNote={this.state.fieldNote}
 			>
 				<TextInput
 					type={this.props.type}
@@ -64,9 +71,11 @@ export class TextField extends Component {
 					required={this.props.required}
 					aria-describedby={this.props.ariaDescribedBy}
 					action={this.handleEmailChange}
+					showError={this.handleOnBlur}
 				/>
 			</Field>
 		);
+		
 	}
 }
 
