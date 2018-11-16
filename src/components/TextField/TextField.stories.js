@@ -28,7 +28,7 @@ stories.add("Required", () => (
 		type="text"
 		required={true}
 		placeholder="Placeholder"
-		title="Please enter the proper text into the field."
+		title="This is a required field. Please enter the proper information"
 		fieldNote="This is a required field."
 		ariaDescribedBy="required-text-field"
 	/>
@@ -44,6 +44,19 @@ stories.add("Disabled", () => (
 		fieldNote="The is a disabled field."
 		ariaDescribedBy="disabled-text-field"
 		disabled
+	/>
+));
+
+stories.add("Email", () => (
+	<TextField
+		name="text-field-1"
+		label="Label"
+		type="email"
+		required
+		placeholder="Placeholder"
+		title="Please enter a valid email address."
+		fieldNote="This is a fieldnote."
+		ariaDescribedBy="error-text-field"
 	/>
 ));
 

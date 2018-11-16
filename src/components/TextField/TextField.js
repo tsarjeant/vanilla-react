@@ -11,7 +11,7 @@ export class TextField extends Component {
 		this.state = {
 			inputValue: '',
 			valid: true,
-			fieldNote: "This is a field note.",
+			fieldNote: this.props.fieldNote,
 			clicked: true
 		}
 		this.handleEmailChange = this.handleEmailChange.bind(this)
@@ -54,18 +54,18 @@ export class TextField extends Component {
 		// If type of input is email and email not valid
 	    if (this.props.type == "email" && !valid) {
 	      fieldClass += ' has-error'
-		  this.state.fieldNote = "Please enter a valid email address."
+		  this.state.fieldNote = this.props.title
 	    }
 		
 		// Return to original 
 		else {
-			this.state.fieldNote = "This is a field note."
+			this.state.fieldNote = this.props.fieldNote
 		}
 		
 		// If input isn't valid, the field is required, and the inputValue is empty
 		if (this.state.inputInvalid && this.props.required && this.state.inputValue == '') {
 			fieldClass += ' has-error'
-			this.state.fieldNote = "Please fill in the required field"
+			this.state.fieldNote = "This is a required field. Please fill in the proper information"
 		}
 		
 		return (
@@ -77,6 +77,7 @@ export class TextField extends Component {
 				disabled={this.props.disabled}
 				required={this.props.required}
 				fieldNote={ this.state.fieldNote }
+				title={ this.props.title }
 			>
 				<TextInput
 					type={this.props.type}
@@ -120,6 +121,7 @@ TextField.propTypes = {
 	disabled: PropTypes.bool,
 	readOnly: PropTypes.bool,
 	ariaDescribedBy: PropTypes.string,
+	title: PropTypes.string,
 	hasError: PropTypes.bool
 };
 
