@@ -16,7 +16,7 @@ export class TextInput extends Component {
 				required={this.props.required}
 				aria-describedby={this.props.ariaDescribedBy}
 				onChange={this.props.action}
-				onBlur={this.props.showError}
+				onBlur={this.props.blurAction}
 			/>
 		);
 	}

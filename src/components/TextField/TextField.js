@@ -9,31 +9,39 @@ export class TextField extends Component {
 		super(props)
 
 		this.state = {
-			email: '',
+			inputValue: '',
 			valid: true,
-			fieldNote: "This is a field note."
+			fieldNote: "This is a field note.",
+			clicked: true
 		}
 		this.handleEmailChange = this.handleEmailChange.bind(this)
 		this.handleOnBlur = this.handleOnBlur.bind(this)
 	}
 
-	validateEmail (email) {
+	validateEmail (inputValue) {
 		const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-		return re.test(email)
+		return re.test(inputValue)
 	}
 	
+	/** 
+	* Validates input field on blur
+	*/
 	handleOnBlur(e) {
-		if(this.props.required && this.state.email == '' ) {
-			alert("This field is required")
-	   }
+		
+		this.setState(state => ({
+			inputInvalid: !state.inputInvalid
+		}));
 	}
 
+	/** 
+	* Validates email field on change
+	*/
 	handleEmailChange(e) {
-		const email = e.target.value
-		const emailValid = this.validateEmail(email)
+		const inputValue = e.target.value
+		const emailValid = this.validateEmail(inputValue)
 
 		this.setState({
-			email: e.target.value,
+			inputValue: e.target.value,
 			valid: emailValid
 		})
 	}
@@ -41,14 +49,23 @@ export class TextField extends Component {
 	render() {
 		
 		let fieldClass = ''
-	    const { email, valid, fieldNote } = this.state
+	    const { valid, fieldNote, inputValue } = this.state
 	    
+		// If type of input is email and email not valid
 	    if (this.props.type == "email" && !valid) {
 	      fieldClass += ' has-error'
 		  this.state.fieldNote = "Please enter a valid email address."
 	    }
+		
+		// Return to original 
 		else {
 			this.state.fieldNote = "This is a field note."
+		}
+		
+		// If input isn't valid, the field is required, and the inputValue is empty
+		if (this.state.inputInvalid && this.props.required && this.state.inputValue == '') {
+			fieldClass += ' has-error'
+			this.state.fieldNote = "Please fill in the required field"
 		}
 		
 		return (
@@ -59,7 +76,7 @@ export class TextField extends Component {
 				hasError={this.props.hasError}
 				disabled={this.props.disabled}
 				required={this.props.required}
-				fieldNote={this.state.fieldNote}
+				fieldNote={ this.state.fieldNote }
 			>
 				<TextInput
 					type={this.props.type}
@@ -71,7 +88,7 @@ export class TextField extends Component {
 					required={this.props.required}
 					aria-describedby={this.props.ariaDescribedBy}
 					action={this.handleEmailChange}
-					showError={this.handleOnBlur}
+					blurAction={this.handleOnBlur}
 				/>
 			</Field>
 		);
