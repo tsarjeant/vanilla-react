@@ -1,0 +1,32 @@
+/*------------------------------------*\
+    #INPUT GROUP
+\*------------------------------------*/
+
+/**
+ * 1) Input with a text label (used for radio/checkbox fields)
+ */
+
+.c-input-group {
+	.c-field.is-disabled & {
+		&:hover {
+			cursor: not-allowed;
+		}
+	}
+}
+
+.c-input-group__control {
+	.c-field.is-disabled & {
+		background: $color-gray-07;
+	}
+}
+
+
+.c-input-group__text {
+	.c-field.has-error .c-input-group__control:checked + & {
+		color: $color-utility-error;
+	}
+
+	.c-field.is-disabled & {
+		color: $color-gray-50;
+	}
+}

@@ -722,6 +722,23 @@ tr {
   border: 2px solid #b12a0b; }
 
 /*------------------------------------*\
+    #INPUT GROUP
+\*------------------------------------*/
+/**
+ * 1) Input with a text label (used for radio/checkbox fields)
+ */
+.c-field.is-disabled .c-input-group:hover {
+  cursor: not-allowed; }
+
+.c-field.is-disabled .c-input-group__control {
+  background: #eee; }
+
+.c-field.has-error .c-input-group__control:checked + .c-input-group__text {
+  color: #b12a0b; }
+.c-field.is-disabled .c-input-group__text {
+  color: #808080; }
+
+/*------------------------------------*\
     #SELECT
 \*------------------------------------*/
 /**
