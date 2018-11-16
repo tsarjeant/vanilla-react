@@ -1,0 +1,23 @@
+/*------------------------------------*\
+    #SELECT
+\*------------------------------------*/
+
+/**
+ * Section
+ * 1) A section is a discrete section of a web page
+ */
+.c-select {
+
+    .c-field.is-disabled & {
+        background: $color-gray-07;
+        color: $color-gray-50;
+
+        &:hover, &:focus {
+            cursor: not-allowed;
+        }
+    }
+
+    .c-field.has-error & {
+        border: 2px solid $color-utility-error;
+    }
+}

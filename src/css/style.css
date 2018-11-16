@@ -721,6 +721,21 @@ tr {
 .c-field.has-error .c-input {
   border: 2px solid #b12a0b; }
 
+/*------------------------------------*\
+    #SELECT
+\*------------------------------------*/
+/**
+ * Section
+ * 1) A section is a discrete section of a web page
+ */
+.c-field.is-disabled .c-select {
+  background: #eee;
+  color: #808080; }
+  .c-field.is-disabled .c-select:hover, .c-field.is-disabled .c-select:focus {
+    cursor: not-allowed; }
+.c-field.has-error .c-select {
+  border: 2px solid #b12a0b; }
+
 /**
  * Blocks
  */

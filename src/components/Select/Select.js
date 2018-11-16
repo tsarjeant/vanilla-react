@@ -6,7 +6,7 @@ export class Select extends Component {
     render() {   
                      
         return (
-            <select className="c-select" id={ this.props.id } multiple={ this.props.multiple } disabled={ this.props.disabled }>
+            <select className="c-select" id={ this.props.id } multiple={ this.props.multiple } disabled={ this.props.disabled } required={this.props.required}>
                 
                 {this.props.listItems.map(function(listItem, index){
                     return (
