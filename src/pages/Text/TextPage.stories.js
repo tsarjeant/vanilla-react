@@ -3,9 +3,8 @@ import { storiesOf } from "@storybook/react";
 import { withInfo } from "@storybook/addon-info";
 import { withKnobs } from "@storybook/addon-knobs/react";
 import { withSmartKnobs } from "storybook-addon-smart-knobs";
+import { linkTo } from "@storybook/addon-links";
 import { TextPage } from "./TextPage";
-
-import heroImg from "../../images/fpo-1200x650.png";
 
 let stories = storiesOf("Pages/TextPage", module);
 
@@ -14,87 +13,24 @@ stories
 	.addDecorator(withSmartKnobs)
 	.addDecorator(withKnobs);
 
-/**
- * Christmas hero content
- */
-const christmasHero = {
-	title: "Our awesome Christmas Title",
-	description: "Christmas Christmas Christmas",
-	imgsrc: heroImg,
-	imgalt: "Alt Text"
-};
-
-/**
- * Long Card list array
- */
-const longCardList = [
+const navItems = [
 	{
-		styleModifier: "c-card--dark",
-		title: "Card 1",
-		description:
-			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+		href: linkTo("Pages/Text/TextPage", "Template"),
+		text: "Nav Link 1"
 	},
 	{
-		title: "Card 2",
-		description:
-			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+		href: linkTo("Pages/Text/TextPage", "Blog Post"),
+		text: "Nav Link 2"
 	},
 	{
-		title: "Card 3",
-		description:
-			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-	},
-	{
-		title: "Card 4",
-		description:
-			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-	},
-	{
-		styleModifier: "c-card--dark",
-		title: "Card 5",
-		description:
-			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-	},
-	{
-		title: "Card 6",
-		description:
-			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-	},
-	{
-		title: "Card 7",
-		description:
-			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-	},
-	{
-		title: "Card 8",
-		description:
-			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-	},
-	{
-		styleModifier: "c-card--dark",
-		title: "Card 9",
-		description:
-			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-	},
-	{
-		title: "Card 10",
-		description:
-			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-	},
-	{
-		title: "Card 11",
-		description:
-			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-	},
-	{
-		title: "Card 12",
-		description:
-			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+		href: linkTo("Pages/Text/TextPage", "Legal Page"),
+		text: "Nav Link 3"
 	}
 ];
 
 stories.add("Template", () => (
 	<TextPage
+		navItems={navItems}
 		title="Text Page Template"
 		description="This is the page description"
 	>
@@ -148,6 +84,7 @@ stories.add("Template", () => (
 
 stories.add("Blog Post", () => (
 	<TextPage
+		navItems={navItems}
 		title="This is a blog post"
 		description="Posted by Author Name on [publication date]"
 	>
@@ -200,7 +137,11 @@ stories.add("Blog Post", () => (
 ));
 
 stories.add("Legal Page", () => (
-	<TextPage title="Terms and Conditions" description="Last updated on [date]">
+	<TextPage
+		navItems={navItems}
+		title="Terms and Conditions"
+		description="Last updated on [date]"
+	>
 		<p>
 			A text passage contains arbitrary text that might come from a CMS.
 			It should live within a container that caps the line length of the
