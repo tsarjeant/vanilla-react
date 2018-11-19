@@ -55,12 +55,6 @@ RadioField.defaultProps = {
 			name: "radioexample",
 			text: "Radio 3",
 			type: "radio"
-		},
-		{
-			id: "radio-4",
-			name: "radioexample",
-			text: "Radio 4",
-			type: "radio"
 		}
 	]
 };

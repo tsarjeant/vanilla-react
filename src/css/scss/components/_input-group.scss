@@ -1,0 +1,27 @@
+/*------------------------------------*\
+    #INPUT GROUP
+\*------------------------------------*/
+
+/**
+ * 1) Input of a form (textarea or text input)
+ */
+
+.c-input-group__control {
+	.c-field.is-disabled & {
+		&:hover {
+			cursor: not-allowed;
+		}
+	}
+}
+.c-input-group__text {
+	.c-field.is-disabled & {
+		color: $color-gray-50;
+
+		&:hover {
+			cursor: not-allowed;
+		}
+	}
+	.c-field.has-error .c-input-group__control:checked + & {
+		color: $color-utility-error;
+	}
+}
