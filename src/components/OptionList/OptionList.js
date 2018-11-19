@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 
 export class OptionList extends Component {
-	onItemChange(e) {
-		console.log("I've been changed!");
+	onItemChange(e, listItem) {
+		console.log(listItem.target.nextElementSibling.innerText);
 	}
 
 	render() {
