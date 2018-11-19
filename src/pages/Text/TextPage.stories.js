@@ -13,26 +13,29 @@ stories
 	.addDecorator(withSmartKnobs)
 	.addDecorator(withKnobs);
 
-const navItems = [
+const navitems = [
 	{
-		href: linkTo("Pages/Text/TextPage", "Template"),
-		text: "Nav Link 1"
+		href: "#",
+		text: "Nav Link 1",
+		onClick: linkTo("Pages/TextPage", "Template")
 	},
 	{
-		href: linkTo("Pages/Text/TextPage", "Blog Post"),
-		text: "Nav Link 2"
+		href: "#",
+		text: "Nav Link 2",
+		onClick: linkTo("Pages/TextPage", "Blog Post")
 	},
 	{
-		href: linkTo("Pages/Text/TextPage", "Legal Page"),
-		text: "Nav Link 3"
+		href: "#",
+		text: "Nav Link 3",
+		onClick: linkTo("Pages/TextPage", "Legal Page")
 	}
 ];
 
 stories.add("Template", () => (
 	<TextPage
-		navItems={navItems}
+		navitems={navitems}
 		title="Text Page Template"
-		description="This is the page description"
+		description="This is the template description"
 	>
 		<p>
 			A text passage contains arbitrary text that might come from a CMS.
@@ -84,7 +87,7 @@ stories.add("Template", () => (
 
 stories.add("Blog Post", () => (
 	<TextPage
-		navItems={navItems}
+		navitems={navitems}
 		title="This is a blog post"
 		description="Posted by Author Name on [publication date]"
 	>
@@ -138,7 +141,7 @@ stories.add("Blog Post", () => (
 
 stories.add("Legal Page", () => (
 	<TextPage
-		navItems={navItems}
+		navitems={navitems}
 		title="Terms and Conditions"
 		description="Last updated on [date]"
 	>
@@ -157,35 +160,5 @@ stories.add("Legal Page", () => (
 			exercitation ullamco laboris nisi ut aliquip ex ea commodo
 			consequat.
 		</p>
-
-		<ul>
-			<li>Here is a unordered list item</li>
-			<li>Here is a unordered list item</li>
-			<li>Here is a unordered list item</li>
-			<li>Here is a unordered list item</li>
-		</ul>
-
-		<h3>Heading 3</h3>
-
-		<ol>
-			<li>Here is a unordered list item</li>
-			<li>Here is a unordered list item</li>
-			<li>Here is a unordered list item</li>
-			<li>Here is a unordered list item</li>
-		</ol>
-
-		<p>
-			<a href="#x">Lorem ipsum dolor sit amet</a>, consectetur adipiscing
-			elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-			aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-			laboris nisi ut aliquip ex ea commodo consequat.
-		</p>
-
-		<blockquote>
-			<p>This is a quotation from something.</p>
-			<cite>Cite source</cite>
-		</blockquote>
-
-		<p>That is all.</p>
 	</TextPage>
 ));
