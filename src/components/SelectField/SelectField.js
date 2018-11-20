@@ -12,6 +12,7 @@ export class SelectField extends Component {
 
 	handleChange(event) {
 		this.setState({ value: event.target.value });
+		console.log(event.target.value);
 	}
 
 	render() {
