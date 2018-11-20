@@ -1,19 +1,22 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { withInfo } from '@storybook/addon-info';
-import { withKnobs } from '@storybook/addon-knobs/react';
-import { withSmartKnobs } from 'storybook-addon-smart-knobs';
+import { withInfo } from "@storybook/addon-info";
+import { withKnobs } from "@storybook/addon-knobs";
+import { withSmartKnobs } from "storybook-addon-smart-knobs";
 import { TextareaField } from "./TextareaField";
 
 let stories = storiesOf("Molecules/Forms/TextareaField", module);
 
-stories.addDecorator(withInfo).addDecorator(withSmartKnobs).addDecorator(withKnobs);
+stories
+	.addDecorator(withInfo)
+	.addDecorator(withSmartKnobs)
+	.addDecorator(withKnobs);
 
 stories.add("Default", () => (
-	<TextareaField 
-        fieldNote="This is a field note"
-        ariaDescribedBy="textarea-field" 
-    />
+	<TextareaField
+		fieldNote="This is a field note"
+		ariaDescribedBy="textarea-field"
+	/>
 ));
 
 stories.add("Required", () => (
@@ -25,7 +28,7 @@ stories.add("Required", () => (
 		placeholder="Placeholder"
 		title="Please enter the proper text into the field."
 		fieldNote="This is a required field."
-        ariaDescribedBy="required-textarea-field"
+		ariaDescribedBy="required-textarea-field"
 	/>
 ));
 
@@ -37,7 +40,7 @@ stories.add("Disabled", () => (
 		placeholder="Placeholder"
 		title="Please enter the proper text into the field."
 		fieldNote="The is a disabled field."
-        ariaDescribedBy="disabled-textarea-field"
+		ariaDescribedBy="disabled-textarea-field"
 		disabled
 	/>
 ));
@@ -52,6 +55,6 @@ stories.add("Error", () => (
 		placeholder="Placeholder"
 		title="Please enter the proper text into the field."
 		fieldNote="There is an error."
-        ariaDescribedBy="error-textarea-field"
+		ariaDescribedBy="error-textarea-field"
 	/>
 ));
