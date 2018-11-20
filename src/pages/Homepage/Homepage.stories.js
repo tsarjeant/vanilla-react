@@ -1,6 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { withInfo } from "@storybook/addon-info";
+
 import { withKnobs } from "@storybook/addon-knobs";
 import { withSmartKnobs } from "storybook-addon-smart-knobs";
 import { Homepage } from "./Homepage";
@@ -10,7 +10,7 @@ import heroImg from "../../images/fpo-1200x650.png";
 let stories = storiesOf("Pages/Homepage", module);
 
 stories
-  .addDecorator(withInfo)
+  
   .addDecorator(withSmartKnobs)
   .addDecorator(withKnobs);
 

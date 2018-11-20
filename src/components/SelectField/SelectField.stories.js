@@ -1,16 +1,12 @@
 import React, { PropTypes } from "react";
 import { storiesOf } from "@storybook/react";
-import { withInfo } from "@storybook/addon-info";
 import { withKnobs } from "@storybook/addon-knobs";
 import { withSmartKnobs } from "storybook-addon-smart-knobs";
 import { SelectField } from "./SelectField";
 
 let stories = storiesOf("Molecules/Forms/SelectField", module);
 
-stories
-	.addDecorator(withInfo)
-	.addDecorator(withSmartKnobs)
-	.addDecorator(withKnobs);
+stories.addDecorator(withSmartKnobs).addDecorator(withKnobs);
 
 stories.add("Default", () => (
 	<SelectField

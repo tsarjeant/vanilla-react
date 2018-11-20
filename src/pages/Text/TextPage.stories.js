@@ -1,6 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { withInfo } from "@storybook/addon-info";
+
 import { withKnobs } from "@storybook/addon-knobs";
 import { withSmartKnobs } from "storybook-addon-smart-knobs";
 import { linkTo } from "@storybook/addon-links";
@@ -9,7 +9,7 @@ import { TextPage } from "./TextPage";
 let stories = storiesOf("Pages/TextPage", module);
 
 stories
-	.addDecorator(withInfo)
+	
 	.addDecorator(withSmartKnobs)
 	.addDecorator(withKnobs);
 
