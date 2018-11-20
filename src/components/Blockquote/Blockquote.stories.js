@@ -1,9 +1,7 @@
-import React, { PropTypes } from 'react';
-import { storiesOf } from '@storybook/react';
-import { Blockquote } from './Blockquote';
+import React from "react";
+import { storiesOf } from "@storybook/react";
+import { Blockquote } from "./Blockquote";
 
-let stories = storiesOf('Atoms/Text/Blockquote', module);
+let stories = storiesOf("Atoms/Text/Blockquote", module);
 
-stories.add('Default', () =>
-    <Blockquote />
-);
+stories.add("Default", () => <Blockquote />);
