@@ -15,6 +15,8 @@ export class Textarea extends Component {
 				readOnly={this.props.readOnly}
 				required={this.props.required}
 				aria-describedby={this.props.ariaDescribedBy}
+				onBlur={this.props.blurAction}
+				onChange={this.props.changeAction}
 			/>
 		);
 	}
