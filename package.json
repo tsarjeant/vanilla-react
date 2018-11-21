@@ -11,30 +11,33 @@
 	"scripts": {
 		"start": "react-scripts start",
 		"build": "react-scripts build",
-		"test": "react-scripts test --env=jsdom",
+		"test": "react-scripts test",
 		"eject": "react-scripts eject",
 		"scss": "node-sass --output-style compressed -o src/css src/css",
 		"watch:css": "onchange 'src/css/**/*.scss' -- npm run scss",
 		"storybook": "start-storybook -p 9009 -s public",
 		"build-storybook": "build-storybook -s public"
 	},
+	"eslintConfig": {
+		"extends": "react-app"
+	},
+	"browserslist": [
+		">0.2%",
+		"not dead",
+		"not ie <= 11",
+		"not op_mini all"
+	],
 	"devDependencies": {
-		"@storybook/addon-actions": "^4.0.7",
-		"@storybook/addon-info": "^4.0.2",
+		"@babel/core": "^7.1.6",
+		"@storybook/addon-actions": "^4.1.0-alpha.3",
 		"@storybook/addon-knobs": "^4.0.7",
-		"@storybook/addon-links": "^4.0.7",
-		"@storybook/addons": "^4.0.7",
-		"@storybook/react": "^4.0.7",
-		"babel-core": "^6.26.3",
-		"babel-runtime": "^6.26.0",
-		"classnames": "^2.2.6",
-		"css-loader": "^0.28.11",
+		"@storybook/addon-links": "^4.1.0-alpha.3",
+		"@storybook/addons": "^4.1.0-alpha.3",
+		"@storybook/react": "^4.1.0-alpha.3",
+		"babel-loader": "^8.0.4",
 		"node-sass": "^4.10.0",
 		"onchange": "^5.1.0",
 		"prettier": "^1.15.2",
-		"sass-loader": "^7.1.0",
-		"storybook-addon-smart-knobs": "^3.3.1",
-		"style-loader": "^0.21.0",
-		"babel-loader": "^8.0.4"
+		"storybook-addon-smart-knobs": "^3.3.1"
 	}
 }
