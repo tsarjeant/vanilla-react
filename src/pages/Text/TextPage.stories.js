@@ -8,24 +8,21 @@ import { TextPage } from "./TextPage";
 
 let stories = storiesOf("Pages/TextPage", module);
 
-stories
-	
-	.addDecorator(withSmartKnobs)
-	.addDecorator(withKnobs);
+stories.addDecorator(withSmartKnobs).addDecorator(withKnobs);
 
 const navitems = [
 	{
-		href: "#",
+		href: false,
 		text: "Nav Link 1",
 		onClick: linkTo("Pages/TextPage", "Template")
 	},
 	{
-		href: "#",
+		href: false,
 		text: "Nav Link 2",
 		onClick: linkTo("Pages/TextPage", "Blog Post")
 	},
 	{
-		href: "#",
+		href: false,
 		text: "Nav Link 3",
 		onClick: linkTo("Pages/TextPage", "Legal Page")
 	}
