@@ -10,7 +10,7 @@ let stories = storiesOf("Pages/TextPage", module);
 
 stories.addDecorator(withSmartKnobs).addDecorator(withKnobs);
 
-const navItems = [
+const navitems = [
 	{
 		href: false,
 		text: "Nav Link 1",
@@ -30,7 +30,7 @@ const navItems = [
 
 stories.add("Template", () => (
 	<TextPage
-		navItems={navItems}
+		navitems={navitems}
 		title="Text Page Template"
 		description="This is the template description"
 	>
@@ -84,7 +84,7 @@ stories.add("Template", () => (
 
 stories.add("Blog Post", () => (
 	<TextPage
-		navItems={navItems}
+		navitems={navitems}
 		title="This is a blog post"
 		description="Posted by Author Name on [publication date]"
 	>
@@ -138,7 +138,7 @@ stories.add("Blog Post", () => (
 
 stories.add("Legal Page", () => (
 	<TextPage
-		navItems={navItems}
+		navitems={navitems}
 		title="Terms and Conditions"
 		description="Last updated on [date]"
 	>
