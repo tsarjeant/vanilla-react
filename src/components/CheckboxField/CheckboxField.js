@@ -36,7 +36,8 @@ CheckboxField.propTypes = {
 	disabled: PropTypes.bool,
 	required: PropTypes.bool,
 	fieldNote: PropTypes.string,
-	title: PropTypes.string
+	title: PropTypes.string,
+	inputChange: PropTypes.func
 };
 
 CheckboxField.defaultProps = {

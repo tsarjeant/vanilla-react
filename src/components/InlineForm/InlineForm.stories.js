@@ -11,6 +11,7 @@ stories.addDecorator(withSmartKnobs).addDecorator(withKnobs);
 
 stories.add("Default", () => (
 	<InlineForm
+		label="Search"
 		method="post"
 		action="http://google.com"
 		id="demo-form-id"

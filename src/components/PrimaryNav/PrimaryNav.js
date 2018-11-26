@@ -6,17 +6,17 @@ export class PrimaryNav extends Component {
 		return (
 			<nav className="c-primary-nav { this.props.styleModifier }">
 				<ul className="c-primary-nav__list">
-					{this.props.navitems.map(function(navitem, index) {
+					{this.props.navItems.map(function(navItem, index) {
 						return (
 							<li
 								className="c-primary-nav__item"
 								key={`c-primary-nav__item-${index}`}
 							>
 								<a
-									href={navitem.href}
-									onClick={navitem.onClick}
+									href={navItem.href}
+									onClick={navItem.onClick}
 								>
-									{navitem.text}
+									{navItem.text}
 								</a>
 							</li>
 						);
@@ -28,13 +28,14 @@ export class PrimaryNav extends Component {
 }
 
 PrimaryNav.propTypes = {
-	navitems: PropTypes.array.isRequired,
+	navItems: PropTypes.array.isRequired,
 	href: PropTypes.string,
+	onClick: PropTypes.func,
 	text: PropTypes.string
 };
 
 PrimaryNav.defaultProps = {
-	navitems: [
+	navItems: [
 		{
 			href: "#",
 			text: "Nav Item"

@@ -1,36 +1,44 @@
 import React, { Component } from "react";
-import '../../css/styleguide.css';
-import PropTypes from 'prop-types';
+import "../../css/styleguide.css";
+import PropTypes from "prop-types";
 
 export class Colors extends Component {
-
-    render() {                
-        return (
-            <ul className="sg-colors">
-                {this.props.listItems.map(function(listItem){
-                   return (
-                       <li key={ listItem.value }>
-                           <span className="sg-swatch" style={{backgroundColor: listItem.value}}></span>
-                           <span className="sg-label">
-                               { listItem.name }
-                               <br /> { listItem.value }
-                               <br /> { listItem.comment }
-                           </span>
-                       </li>
-                   )
-                 })}
-            </ul>
-        );
-    }
+	render() {
+		return (
+			<ul className="sg-colors">
+				{this.props.listItems.map(function(listItem, index) {
+					return (
+						<li key={`color-${index}`}>
+							<span
+								className="sg-swatch"
+								style={{ backgroundColor: listItem.value }}
+							/>
+							<span className="sg-label">
+								{listItem.name}
+								<br /> {listItem.value}
+								<br /> {listItem.comment}
+							</span>
+						</li>
+					);
+				})}
+			</ul>
+		);
+	}
 }
+
+Colors.propTypes = {
+	listItems: PropTypes.array,
+	value: PropTypes.string,
+	name: PropTypes.string,
+	comment: PropTypes.string
+};
 
 Colors.defaultProps = {
-    listItems: [
-        {
-          "name": "$color-brand-blue",
-          "value": "#0000ff",
-          "comment": ""
-        }
-    ]
-}
-
+	listItems: [
+		{
+			name: "$color-brand-blue",
+			value: "#0000ff",
+			comment: ""
+		}
+	]
+};

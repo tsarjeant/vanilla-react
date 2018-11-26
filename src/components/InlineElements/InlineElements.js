@@ -1,54 +1,101 @@
 import React, { Component } from "react";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 export class InlineElements extends Component {
+	render() {
+		return (
+			<React.Fragment>
+				<p>
+					<a href="#">This is a text link</a>
+				</p>
 
-    render() {                
-        return (
-            <React.Fragment>
+				<p>
+					<strong>
+						Strong is used to indicate strong importance
+					</strong>
+				</p>
 
-            	<p><a href="#">This is a text link</a></p>
+				<p>
+					<em>This text has added emphasis</em>
+				</p>
 
-            	<p><strong>Strong is used to indicate strong importance</strong></p>
+				<p>
+					The <b>b element</b> is stylistically different text from
+					normal text, without any special importance
+				</p>
 
-            	<p><em>This text has added emphasis</em></p>
+				<p>
+					The <i>i element</i> is text that is set off from the normal
+					text
+				</p>
 
-            	<p>The <b>b element</b> is stylistically different text from normal text, without any special importance</p>
+				<p>
+					The <u>u element</u> is text with an unarticulated, though
+					explicitly rendered, non-textual annotation
+				</p>
 
-            	<p>The <i>i element</i> is text that is set off from the normal text</p>
+				<p>
+					<del>This text is deleted</del> and{" "}
+					<ins>This text is inserted</ins>
+				</p>
 
-            	<p>The <u>u element</u> is text with an unarticulated, though explicitly rendered, non-textual annotation</p>
+				<p>
+					<s>This text has a strikethrough</s>
+				</p>
 
-            	<p><del>This text is deleted</del> and <ins>This text is inserted</ins></p>
+				<p>
+					Superscript<sup>®</sup>
+				</p>
 
-            	<p><s>This text has a strikethrough</s></p>
+				<p>
+					Subscript for things like H<sub>2</sub>O
+				</p>
 
-            	<p>Superscript<sup>®</sup></p>
+				<p>
+					<small>
+						This small text is small for for fine print, etc.
+					</small>
+				</p>
 
-            	<p>Subscript for things like H<sub>2</sub>O</p>
+				<p>
+					Abbreviation:{" "}
+					<abbr title="HyperText Markup Language">HTML</abbr>
+				</p>
 
-            	<p><small>This small text is small for for fine print, etc.</small></p>
+				<p>
+					Keybord input: <kbd>Cmd</kbd>
+				</p>
 
-            	<p>Abbreviation: <abbr title="HyperText Markup Language">HTML</abbr></p>
+				<p>
+					<q cite="https://developer.mozilla.org/en-US/docs/HTML/Element/q">
+						This text is a short inline quotation
+					</q>
+				</p>
 
-            	<p>Keybord input: <kbd>Cmd</kbd></p>
+				<p>
+					<cite>This is a citation</cite>
+				</p>
+				<p>
+					The <dfn>dfn element</dfn> indicates a definition.
+				</p>
 
-            	<p><q cite="https://developer.mozilla.org/en-US/docs/HTML/Element/q">This text is a short inline quotation</q></p>
+				<p>
+					The <mark>mark element</mark> indicates a highlight
+				</p>
 
-            	<p><cite>This is a citation</cite>
+				<p>
+					<code>This is what inline code looks like.</code>
+				</p>
 
-            	</p><p>The <dfn>dfn element</dfn> indicates a definition.</p>
+				<p>
+					<samp>This is sample output from a computer program</samp>
+				</p>
 
-            	<p>The <mark>mark element</mark> indicates a highlight</p>
-
-            	<p><code>This is what inline code looks like.</code></p>
-
-            	<p><samp>This is sample output from a computer program</samp></p>
-
-            	<p>The <var>variable element</var>, such as <var>x</var> = <var>y</var></p>
-
-            </ React.Fragment>
-        );
-    }
+				<p>
+					The <var>variable element</var>, such as <var>x</var> ={" "}
+					<var>y</var>
+				</p>
+			</React.Fragment>
+		);
+	}
 }
-

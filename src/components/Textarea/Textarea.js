@@ -31,7 +31,9 @@ Textarea.propTypes = {
 	disabled: PropTypes.bool,
 	readOnly: PropTypes.bool,
 	required: PropTypes.bool,
-	ariaDescribedBy: PropTypes.string
+	ariaDescribedBy: PropTypes.string,
+	onBlur: PropTypes.func,
+	onChange: PropTypes.func
 };
 
 Textarea.defaultProps = {

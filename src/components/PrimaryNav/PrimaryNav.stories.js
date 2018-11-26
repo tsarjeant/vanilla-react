@@ -8,25 +8,4 @@ let stories = storiesOf("Molecules/Navigation/PrimaryNav", module);
 
 stories.addDecorator(withSmartKnobs).addDecorator(withKnobs);
 
-stories.add("Default", () => (
-	<PrimaryNav
-		listItems={[
-			{
-				href: "#",
-				text: "Nav Item 1"
-			},
-			{
-				href: "#",
-				text: "Nav Item 2"
-			},
-			{
-				href: "#",
-				text: "Nav Item 3"
-			},
-			{
-				href: "#",
-				text: "Nav Item 4"
-			}
-		]}
-	/>
-));
+stories.add("Default", () => <PrimaryNav />);

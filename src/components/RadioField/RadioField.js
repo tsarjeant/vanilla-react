@@ -25,7 +25,6 @@ export class RadioField extends Component {
 }
 
 RadioField.propTypes = {
-	listItems: PropTypes.array,
 	fieldClass: PropTypes.string,
 	id: PropTypes.string,
 	label: PropTypes.string,
@@ -33,7 +32,8 @@ RadioField.propTypes = {
 	disabled: PropTypes.bool,
 	required: PropTypes.bool,
 	fieldNote: PropTypes.string,
-	title: PropTypes.string
+	title: PropTypes.string,
+	listItems: PropTypes.array
 };
 
 RadioField.defaultProps = {

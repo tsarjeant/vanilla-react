@@ -9,8 +9,8 @@ export class Select extends Component {
 				id={this.props.id}
 				multiple={this.props.multiple}
 				disabled={this.props.disabled}
-				onChange={this.props.changeAction}
 				value={this.props.value}
+				onChange={this.props.changeAction}
 			>
 				{this.props.listItems.map(function(listItem, index) {
 					return listItem.optGroupLabel ? (
@@ -44,11 +44,14 @@ export class Select extends Component {
 }
 
 Select.propTypes = {
-	listItems: PropTypes.array,
 	id: PropTypes.string,
+	multiple: PropTypes.bool,
+	disabled: PropTypes.bool,
 	value: PropTypes.string,
-	option: PropTypes.string,
-	optGroupLabel: PropTypes.string
+	onChange: PropTypes.func,
+	listItems: PropTypes.array,
+	optGroupLabel: PropTypes.string,
+	option: PropTypes.string
 };
 
 Select.defaultProps = {

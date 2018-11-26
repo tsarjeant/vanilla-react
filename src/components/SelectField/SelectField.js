@@ -38,6 +38,7 @@ export class SelectField extends Component {
 SelectField.propTypes = {
 	id: PropTypes.string,
 	label: PropTypes.string,
+	handleChange: PropTypes.func,
 	fieldNote: PropTypes.string
 };
 

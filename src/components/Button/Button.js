@@ -1,34 +1,33 @@
 import React, { Component } from "react";
 import classnames from "classnames";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 export class Button extends Component {
+	render() {
+		const btnClass = classnames("c-btn", this.props.className, {
+			"c-btn--secondary": this.props.issecondary
+		});
 
-    render() {
-        const btnClass = classnames('c-btn', this.props.className, {
-            'c-btn--secondary': this.props.issecondary
-        });
-
-        return (
-            <button
-                className={ btnClass }
-                disabled={ this.props.disabled }
-                {...this.props}
-            >
-                {this.props.text}
-            </button>
-        );
-    }
+		return (
+			<button
+				className={btnClass}
+				disabled={this.props.disabled}
+				{...this.props}
+			>
+				{this.props.text}
+			</button>
+		);
+	}
 }
 
 Button.propTypes = {
-    btnClass: PropTypes.string,
-    issecondary: PropTypes.bool,
-    disabled: PropTypes.bool,
-    text: PropTypes.string
-}
+	btnClass: PropTypes.string,
+	issecondary: PropTypes.bool,
+	disabled: PropTypes.bool,
+	text: PropTypes.string
+};
 
 Button.defaultProps = {
-    disabled: false,
-    text: 'Button'
-}
+	disabled: false,
+	text: "Button"
+};

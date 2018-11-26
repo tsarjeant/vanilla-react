@@ -84,16 +84,21 @@ export class TextareaField extends Component {
 }
 
 TextareaField.propTypes = {
+	fieldClass: PropTypes.string,
 	id: PropTypes.string,
-	name: PropTypes.string,
 	label: PropTypes.string,
-	fieldNote: PropTypes.string,
-	required: PropTypes.bool,
+	hasError: PropTypes.bool,
 	disabled: PropTypes.bool,
+	required: PropTypes.bool,
+	fieldNote: PropTypes.string,
+	type: PropTypes.string,
+	name: PropTypes.string,
+	value: PropTypes.string,
+	placeholder: PropTypes.string,
 	readOnly: PropTypes.bool,
 	ariaDescribedBy: PropTypes.string,
-	hasError: PropTypes.bool,
-	value: PropTypes.string
+	handleOnBlur: PropTypes.func,
+	handleInputChange: PropTypes.func
 };
 
 TextareaField.defaultProps = {

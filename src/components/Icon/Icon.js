@@ -15,5 +15,6 @@ Icon.propTypes = {
 
 Icon.defaultProps = {
 	iconClass: "c-icon",
+	icon: "search",
 	children: <SearchIcon />
 };

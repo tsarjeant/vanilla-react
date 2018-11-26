@@ -31,11 +31,13 @@ export class Field extends Component {
 }
 
 Field.propTypes = {
+	fieldClass: PropTypes.string,
 	id: PropTypes.string,
 	label: PropTypes.string,
-	fieldNote: PropTypes.string,
 	required: PropTypes.bool,
-	children: PropTypes.node
+	children: PropTypes.node,
+	ariaDescribedBy: PropTypes.string,
+	fieldNote: PropTypes.string
 };
 
 Field.defaultProps = {

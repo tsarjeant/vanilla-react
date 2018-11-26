@@ -17,35 +17,35 @@ export class IconGrid extends Component {
 			<ul className="icon-grid">
 				<li className="icon-grid__item">
 					<MinusIcon />
-					<span class="icon-grid__text">Minus</span>
+					<span className="icon-grid__text">Minus</span>
 				</li>
 				<li className="icon-grid__item">
 					<PlusIcon />
-					<span class="icon-grid__text">Plus</span>
+					<span className="icon-grid__text">Plus</span>
 				</li>
 				<li className="icon-grid__item">
 					<SearchIcon />
-					<span class="icon-grid__text">Search</span>
+					<span className="icon-grid__text">Search</span>
 				</li>
 				<li className="icon-grid__item">
 					<ShoppingCartIcon />
-					<span class="icon-grid__text">Shopping Cart</span>
+					<span className="icon-grid__text">Shopping Cart</span>
 				</li>
 				<li className="icon-grid__item">
 					<TriangleDownIcon />
-					<span class="icon-grid__text">Triangle Down</span>
+					<span className="icon-grid__text">Triangle Down</span>
 				</li>
 				<li className="icon-grid__item">
 					<TriangleLeftIcon />
-					<span class="icon-grid__text">Triangle Left</span>
+					<span className="icon-grid__text">Triangle Left</span>
 				</li>
 				<li className="icon-grid__item">
 					<TriangleRightIcon />
-					<span class="icon-grid__text">Triangle Right</span>
+					<span className="icon-grid__text">Triangle Right</span>
 				</li>
 				<li className="icon-grid__item">
 					<TriangleUpIcon />
-					<span class="icon-grid__text">Triangle Up</span>
+					<span className="icon-grid__text">Triangle Up</span>
 				</li>
 			</ul>
 		);

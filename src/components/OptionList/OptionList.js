@@ -53,6 +53,7 @@ OptionList.propTypes = {
 	name: PropTypes.string,
 	disabled: PropTypes.bool,
 	readOnly: PropTypes.bool,
+	onChange: PropTypes.func,
 	text: PropTypes.string
 };
 

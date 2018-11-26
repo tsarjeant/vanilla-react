@@ -10,7 +10,7 @@ export class Header extends Component {
 			<header className="c-header" {...this.props}>
 				<Logo href="/" />
 
-				<PrimaryNav navitems={this.props.navitems} />
+				<PrimaryNav navItems={this.props.navItems} />
 
 				<InlineForm
 					method="post"
@@ -28,5 +28,5 @@ export class Header extends Component {
 
 Header.propTypes = {
 	children: PropTypes.node,
-	navitems: PropTypes.array
+	navItems: PropTypes.array
 };

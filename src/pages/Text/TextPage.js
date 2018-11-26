@@ -9,7 +9,7 @@ export class TextPage extends Component {
 	render() {
 		return (
 			<React.Fragment>
-				<Header navitems={this.props.navitems} />
+				<Header navItems={this.props.navItems} />
 
 				<main role="main">
 					<div className="l-linelength-container">

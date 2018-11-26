@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 
 export class TextInput extends Component {
-	
 	render() {
 		return (
 			<input
@@ -10,6 +9,7 @@ export class TextInput extends Component {
 				id={this.props.id}
 				name={this.props.name}
 				type={this.props.type}
+				value={this.props.value}
 				placeholder={this.props.placeholder}
 				disabled={this.props.disabled}
 				readOnly={this.props.readOnly}
@@ -23,6 +23,7 @@ export class TextInput extends Component {
 }
 
 TextInput.propTypes = {
+	id: PropTypes.string,
 	name: PropTypes.string,
 	type: PropTypes.oneOf([
 		"text",
@@ -44,11 +45,13 @@ TextInput.propTypes = {
 	disabled: PropTypes.bool,
 	readOnly: PropTypes.bool,
 	required: PropTypes.bool,
-	ariaDescribedBy: PropTypes.string
+	ariaDescribedBy: PropTypes.string,
+	onChange: PropTypes.func,
+	onBlur: PropTypes.func
 };
 
 TextInput.defaultProps = {
-	disabled:false,
+	disabled: false,
 	placeholder: "Placeholder",
 	type: "text"
 };
