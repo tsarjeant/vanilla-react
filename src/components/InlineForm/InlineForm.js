@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { Button } from "../Button/Button";
-import { ReactComponent as SearchIcon } from "../../icons/search.svg";
 import "./InlineForm.scss";
 
 export class InlineForm extends Component {
@@ -23,8 +22,6 @@ export class InlineForm extends Component {
 					className="c-inline-form__input"
 					placeholder={this.props.placeholder}
 				/>
-
-				<SearchIcon />
 
 				<Button text={this.props.cta} />
 			</form>
