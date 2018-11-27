@@ -1,21 +1,23 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { ReactComponent as SearchIcon } from "../../icons/search.svg";
 import "./Icon.scss";
 
 export class Icon extends Component {
 	render() {
-		return <React.Fragment>{this.props.children}</React.Fragment>;
+		return (
+			<svg className={`c-icon ${this.props.iconClass}`}>
+				<use xlinkHref={`./icons.svg#${this.props.iconname}`} />
+			</svg>
+		);
 	}
 }
 
 Icon.propTypes = {
-	icon: PropTypes.string.isRequired,
-	iconClass: PropTypes.string
+	iconClass: PropTypes.string,
+	iconname: PropTypes.string.isRequired
 };
 
 Icon.defaultProps = {
 	iconClass: "c-icon",
-	icon: "search",
-	children: <SearchIcon />
+	iconname: "search"
 };
