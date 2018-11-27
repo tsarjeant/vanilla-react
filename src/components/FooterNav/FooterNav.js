@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import "./FooterNav.scss";
 
 export class FooterNav extends Component {
 	render() {

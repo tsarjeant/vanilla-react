@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { Button } from "../Button/Button";
 import { ReactComponent as SearchIcon } from "../../icons/search.svg";
+import "./InlineForm.scss";
 
 export class InlineForm extends Component {
 	render() {

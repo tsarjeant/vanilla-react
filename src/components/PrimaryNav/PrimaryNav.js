@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import "./PrimaryNav.scss";
 
 export class PrimaryNav extends Component {
 	render() {

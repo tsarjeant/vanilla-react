@@ -7,7 +7,7 @@
  * 1) A section is a discrete section of a web page 
  */
 .c-section {
-    padding: 2rem;
+	padding: 2rem;
 }
 
 /**
@@ -15,23 +15,23 @@
  * 1) contains the section title, description and other header content 
  */
 .c-section__header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 2rem;
 }
 
 /**
  * Section title 
  */
 .c-section__title {
-    font-size: 2rem;
-    margin: 0;
+	font-size: 2rem;
+	margin: 0;
 }
 
 /**
  * Section description 
  */
 .c-section__description {
-    margin: 0;
+	margin: 0;
 }

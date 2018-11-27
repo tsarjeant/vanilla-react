@@ -36,59 +36,6 @@
 @import "scss/layout/layout";
 
 /*------------------------------------*\
-    #COMPONENTS
-\*------------------------------------*/
-
-/**
- * Global
- */
-@import "scss/components/footer";
-@import "scss/components/header";
-@import "scss/components/logo";
-
-/**
- * Page
- */
-@import "scss/components/section";
-@import "scss/components/page-header";
-
-/**
- * Navigation
- */
-@import "scss/components/primary-nav";
-@import "scss/components/footer-nav";
-
-/**
- * Forms
- */
-@import "scss/components/field";
-@import "scss/components/buttons";
-@import "scss/components/inline-form";
-@import "scss/components/input";
-@import "scss/components/input-group";
-
-/**
- * Blocks
- */
-@import "scss/components/card";
-@import "scss/components/hero";
-
-/**
- * Images
- */
-@import "scss/components/icon";
-
-/**
- * Text
- */
-@import "scss/components/text-passage";
-
-/**
- * Lists
- */
-@import "scss/components/card-list";
-
-/*------------------------------------*\
     #UTILITIES
 \*------------------------------------*/
 @import "scss/utilities/visibility";

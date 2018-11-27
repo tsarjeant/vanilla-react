@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import classnames from "classnames";
 import PropTypes from "prop-types";
 import { Label } from "../Label/Label";
+import "./Field.scss";
 
 export class Field extends Component {
 	render() {

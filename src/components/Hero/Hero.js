@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import "./Hero.scss";
 
 export class Hero extends Component {
 	render() {

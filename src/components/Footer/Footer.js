@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { FooterNav } from "../FooterNav/FooterNav";
 import { InlineForm } from "../InlineForm/InlineForm";
 import globals from "../../data/globals.json";
+import "./Footer.scss";
 
 export class Footer extends Component {
 	render() {

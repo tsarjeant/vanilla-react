@@ -33,10 +33,10 @@
  * Breakpoints................Global breakpoint definitions
  */
 
- /*------------------------------------*\
+/*------------------------------------*\
      #COLORS
  \*------------------------------------*/
- 
+
 /**
  * Brand Colors
  * 1) Brand=specific colors
@@ -72,10 +72,6 @@ $color-utility-success-light: #d4f3e6;
 $color-utility-warning: #a59b15;
 $color-utility-warning-light: #fffecf;
 
-
-
-
-
 /*------------------------------------*\
     #TYPOGRAPHY
 \*------------------------------------*/
@@ -85,7 +81,6 @@ $color-utility-warning-light: #fffecf;
  */
 $font-primary: "HelveticaNeue", "Helvetica", "Arial", sans-serif;
 $font-secondary: serif;
-
 
 /**
  * Font Sizing
@@ -107,10 +102,6 @@ $font-size-h2: 36px !default;
 $font-size-h3: 27px !default;
 $font-size-h4: 19px !default;
 
-
-
-
-
 /*------------------------------------*\
     #LAYOUT
 \*------------------------------------*/
@@ -120,10 +111,6 @@ $font-size-h4: 19px !default;
  */
 $l-max-width: 60rem !default;
 $l-linelength-width: 36rem !default;
-
-
-
-
 
 /*------------------------------------*\
     #SPACING
@@ -138,10 +125,6 @@ $spacing: 1rem;
 $spacing-small: round(0.5 * $spacing);
 $spacing-large: round(2 * $spacing);
 
-
-
-
-
 /*------------------------------------*\
     #BORDERS
 \*------------------------------------*/
@@ -149,16 +132,12 @@ $spacing-large: round(2 * $spacing);
 /**
  * Border
  */
- $border-thickness: 1px;
+$border-thickness: 1px;
 
 /**
  * Border radius
  */
 $border-radius: 4px;
-
-
-
-
 
 /*------------------------------------*\
     #ANIMATION
@@ -174,10 +153,6 @@ $anim-fade-long: 0.4s;
  * Transition Ease
  */
 $anim-ease: ease-out;
-
-
-
-
 
 /*------------------------------------*\
     #BREAKPOINTS

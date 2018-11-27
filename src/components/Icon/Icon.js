@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { ReactComponent as SearchIcon } from "../../icons/search.svg";
+import "./Icon.scss";
 
 export class Icon extends Component {
 	render() {

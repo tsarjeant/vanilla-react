@@ -1,3 +1,5 @@
+@import "../../css/scss/abstracts/variables.scss";
+
 /*------------------------------------*\
     #TEXT PASSAGE
 \*------------------------------------*/
@@ -6,7 +8,6 @@
  * 1) A passage of text, including various components (i.e. article, blog post)
  */
 .c-text-passage {
-
 	p {
 		margin-bottom: 1rem;
 	}
@@ -26,14 +27,14 @@
 		border-left: 3px solid $color-gray-73;
 		color: $color-gray-50;
 		font-size: 1rem;
-	 }
+	}
 
-	 /**
+	/**
 	  * First-level heading within text passage
 	  */
-	 h1 {
-		 margin-bottom: 1rem;
-	 }
+	h1 {
+		margin-bottom: 1rem;
+	}
 
 	/**
 	 * Second-level heading within text passage
@@ -71,7 +72,6 @@
 	h6 {
 		margin: 1rem 0 1rem;
 	}
-
 
 	/**
 	 * Unordered list within text passage

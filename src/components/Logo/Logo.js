@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import logoImg from "../../images/fpo-120x60.png";
 import globals from "../../data/globals.json";
+import "./Logo.scss";
 
 export class Logo extends Component {
 	render() {

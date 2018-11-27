@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { Logo } from "../Logo/Logo";
 import { PrimaryNav } from "../PrimaryNav/PrimaryNav";
 import { InlineForm } from "../InlineForm/InlineForm";
+import "./Header.scss";
 
 export class Header extends Component {
 	render() {
