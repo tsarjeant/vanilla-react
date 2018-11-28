@@ -13,7 +13,9 @@ module.exports = (baseConfig, env, defaultConfig) => {
 			spriteFilename: svgPath => `icons${svgPath.substr(-4)}`
 		}
 	});
-	defaultConfig.plugins.push(new SpriteLoaderPlugin({ plainSprite: true }));
+	defaultConfig.plugins.unshift(
+		new SpriteLoaderPlugin({ plainSprite: true })
+	);
 	console.log(defaultConfig.output);
 	return defaultConfig;
 };

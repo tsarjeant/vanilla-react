@@ -43,6 +43,9 @@ IconGrid.defaultProps = {
 			iconname: "search"
 		},
 		{
+			iconname: "shopping-cart"
+		},
+		{
 			iconname: "triangle-down"
 		},
 		{
