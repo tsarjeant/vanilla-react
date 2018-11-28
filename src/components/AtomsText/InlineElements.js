@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 export class InlineElements extends Component {
 	render() {
 		return (
-			<React.Fragment>
+			<div {...this.props}>
 				<p>
 					<a href="#">This is a text link</a>
 				</p>
@@ -95,7 +95,7 @@ export class InlineElements extends Component {
 					The <var>variable element</var>, such as <var>x</var> ={" "}
 					<var>y</var>
 				</p>
-			</React.Fragment>
+			</div>
 		);
 	}
 }

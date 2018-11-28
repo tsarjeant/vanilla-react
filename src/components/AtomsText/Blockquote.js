@@ -1,10 +1,9 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
 
 export class Blockquote extends Component {
 	render() {
 		return (
-			<blockquote>
+			<blockquote {...this.props}>
 				<p>
 					A block quotation (also known as a long quotation or
 					extract) is a quotation in a written document, that is set
