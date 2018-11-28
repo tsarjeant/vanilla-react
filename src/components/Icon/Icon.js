@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+require.context("../../icons", true, /\.svg$/);
 import "./Icon.scss";
 
 export class Icon extends Component {
