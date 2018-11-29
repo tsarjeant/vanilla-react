@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "../../css/styleguide.css";
 import PropTypes from "prop-types";
+import brandColors from "../../data/brand-colors.json";
 
 export class Colors extends Component {
 	render() {
@@ -34,11 +35,5 @@ Colors.propTypes = {
 };
 
 Colors.defaultProps = {
-	listItems: [
-		{
-			name: "$color-brand-blue",
-			value: "#0000ff",
-			comment: ""
-		}
-	]
+	listItems: brandColors.items
 };
