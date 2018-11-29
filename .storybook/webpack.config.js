@@ -2,7 +2,7 @@ const path = require("path");
 const SpriteLoaderPlugin = require("svg-sprite-loader/plugin");
 const scssToJson = require("scsstojson");
 
-var items = [
+var variableItems = [
 	{
 		src: "./src/css/scss/abstracts/_variables.scss",
 		dest: "./src/data/brand-colors.json",
@@ -29,23 +29,20 @@ var items = [
 	}
 ];
 
-scssToJson(items, {}, function() {});
+scssToJson(variableItems, {}, function() {});
 
 module.exports = (baseConfig, env, defaultConfig) => {
-	// Extend defaultConfig as you need.
-
-	// For example, add typescript loader:
+	//SVG Icon Sprite Loader
 	defaultConfig.module.rules.push({
 		test: /\.svg$/,
 		loader: "svg-sprite-loader",
 		options: {
-			extract: true,
-			spriteFilename: svgPath => `icons${svgPath.substr(-4)}`
+			extract: true, //makes the external svg sprite file
+			spriteFilename: svgPath => `icons${svgPath.substr(-4)}` //name icon sprite file
 		}
 	});
 	defaultConfig.plugins.unshift(
 		new SpriteLoaderPlugin({ plainSprite: true })
 	);
-	console.log(defaultConfig.output);
 	return defaultConfig;
 };
