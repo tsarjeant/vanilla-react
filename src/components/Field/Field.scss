@@ -44,6 +44,11 @@
 	.c-field.has-error & {
 		border-color: $color-utility-error;
 	}
+	.c-field.is-disabled & {
+		border-color: $color-neutral-gray-27;
+		background: $color-neutral-gray-07;
+		color: $color-neutral-gray-50;
+	}
 }
 
 /**
