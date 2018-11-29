@@ -15,7 +15,7 @@ stories.add("Default", () => (
 		type="text"
 		placeholder="Placeholder"
 		title="Please enter the proper text into the field."
-		fieldNote="The is the field note."
+		fieldNote="This is the field note."
 		ariaDescribedBy="text-field"
 	/>
 ));

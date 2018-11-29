@@ -59,6 +59,7 @@ export class TextareaField extends Component {
 			<Field
 				className={fieldClass}
 				id={this.props.id}
+				ariaDescribedBy={this.props.ariaDescribedBy}
 				label={this.props.label}
 				hasError={this.props.hasError}
 				disabled={this.props.disabled}
@@ -74,7 +75,7 @@ export class TextareaField extends Component {
 					disabled={this.props.disabled}
 					readOnly={this.props.readOnly}
 					required={this.props.required}
-					aria-describedby={this.props.ariaDescribedBy}
+					ariaDescribedBy={this.props.ariaDescribedBy}
 					blurAction={this.handleOnBlur}
 					changeAction={this.handleInputChange}
 				/>
