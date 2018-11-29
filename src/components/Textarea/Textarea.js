@@ -15,6 +15,7 @@ export class Textarea extends Component {
 				readOnly={this.props.readOnly}
 				required={this.props.required}
 				aria-describedby={this.props.ariaDescribedBy}
+				aria-labelledby={this.props.ariaLabelledBy}
 				onBlur={this.props.blurAction}
 				onChange={this.props.changeAction}
 			/>
@@ -32,6 +33,7 @@ Textarea.propTypes = {
 	readOnly: PropTypes.bool,
 	required: PropTypes.bool,
 	ariaDescribedBy: PropTypes.string,
+	ariaLabelledBy: PropTypes.string,
 	onBlur: PropTypes.func,
 	onChange: PropTypes.func
 };

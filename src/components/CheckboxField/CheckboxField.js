@@ -17,10 +17,15 @@ export class CheckboxField extends Component {
 				required={this.props.required}
 				fieldNote={this.props.fieldNote}
 				title={this.props.title}
+				ariaDescribedBy={this.props.ariaDescribedBy}
+				ariaLabelledBy={this.props.ariaLabelledBy}
+				tag={this.props.tag}
 			>
 				<OptionList
 					listItems={this.props.listItems}
 					inputChange={this.handleInputChange}
+					ariaDescribedBy={this.props.ariaDescribedBy}
+					ariaLabelledBy={this.props.ariaLabelledBy}
 				/>
 			</Field>
 		);
@@ -37,10 +42,15 @@ CheckboxField.propTypes = {
 	required: PropTypes.bool,
 	fieldNote: PropTypes.string,
 	title: PropTypes.string,
-	inputChange: PropTypes.func
+	inputChange: PropTypes.func,
+	ariaDescribedBy: PropTypes.string,
+	ariaLabelledBy: PropTypes.string
 };
 
 CheckboxField.defaultProps = {
+	tag: "h4",
+	ariaDescribedBy: "checkbox-field-1",
+	ariaLabelledBy: "checkbox-field-1-label",
 	listItems: [
 		{
 			id: "checkbox-1",

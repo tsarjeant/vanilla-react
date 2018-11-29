@@ -11,7 +11,6 @@ stories.addDecorator(withSmartKnobs).addDecorator(withKnobs);
 stories.add("Default", () => (
 	<TextField
 		name="text-field-1"
-		label="Label"
 		type="text"
 		placeholder="Placeholder"
 		title="Please enter the proper text into the field."

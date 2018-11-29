@@ -11,6 +11,8 @@ export class Select extends Component {
 				disabled={this.props.disabled}
 				value={this.props.value}
 				onChange={this.props.changeAction}
+				aria-describedby={this.props.ariaDescribedBy}
+				aria-labelledby={this.props.ariaLabelledBy}
 			>
 				{this.props.listItems.map(function(listItem, index) {
 					return listItem.optGroupLabel ? (
@@ -51,7 +53,9 @@ Select.propTypes = {
 	onChange: PropTypes.func,
 	listItems: PropTypes.array,
 	optGroupLabel: PropTypes.string,
-	option: PropTypes.string
+	option: PropTypes.string,
+	ariaDescribedBy: PropTypes.string,
+	ariaLabelledBy: PropTypes.string
 };
 
 Select.defaultProps = {

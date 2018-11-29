@@ -60,6 +60,7 @@ export class TextareaField extends Component {
 				className={fieldClass}
 				id={this.props.id}
 				ariaDescribedBy={this.props.ariaDescribedBy}
+				ariaLabelledBy={this.props.ariaLabelledBy}
 				label={this.props.label}
 				hasError={this.props.hasError}
 				disabled={this.props.disabled}
@@ -76,6 +77,7 @@ export class TextareaField extends Component {
 					readOnly={this.props.readOnly}
 					required={this.props.required}
 					ariaDescribedBy={this.props.ariaDescribedBy}
+					ariaLabelledBy={this.props.ariaLabelledBy}
 					blurAction={this.handleOnBlur}
 					changeAction={this.handleInputChange}
 				/>
@@ -98,6 +100,7 @@ TextareaField.propTypes = {
 	placeholder: PropTypes.string,
 	readOnly: PropTypes.bool,
 	ariaDescribedBy: PropTypes.string,
+	ariaLabelledBy: PropTypes.string,
 	handleOnBlur: PropTypes.func,
 	handleInputChange: PropTypes.func
 };
@@ -105,5 +108,7 @@ TextareaField.propTypes = {
 TextareaField.defaultProps = {
 	id: "textarea-field-1",
 	label: "Label",
-	fieldNote: "This is a fieldnote."
+	fieldNote: "This is a fieldnote.",
+	ariaDescribedBy: "textarea-field-1",
+	ariaLabelledBy: "textarea-field-1-label"
 };

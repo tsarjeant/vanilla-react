@@ -17,8 +17,15 @@ export class RadioField extends Component {
 				required={this.props.required}
 				fieldNote={this.props.fieldNote}
 				title={this.props.title}
+				tag={this.props.tag}
+				ariaDescribedBy={this.props.ariaDescribedBy}
+				ariaLabelledBy={this.props.ariaLabelledBy}
 			>
-				<OptionList listItems={this.props.listItems} />
+				<OptionList
+					listItems={this.props.listItems}
+					ariaDescribedBy={this.props.ariaDescribedBy}
+					ariaLabelledBy={this.props.ariaLabelledBy}
+				/>
 			</Field>
 		);
 	}
@@ -33,10 +40,15 @@ RadioField.propTypes = {
 	required: PropTypes.bool,
 	fieldNote: PropTypes.string,
 	title: PropTypes.string,
-	listItems: PropTypes.array
+	listItems: PropTypes.array,
+	ariaDescribedBy: PropTypes.string,
+	ariaLabelledBy: PropTypes.string
 };
 
 RadioField.defaultProps = {
+	tag: "h4",
+	ariaDescribedBy: "radio-field-1",
+	ariaLabelledBy: "radio-field-1-label",
 	listItems: [
 		{
 			id: "radio-1",

@@ -16,6 +16,8 @@ export class Field extends Component {
 					htmlFor={this.props.id}
 					labelText={this.props.label}
 					required={this.props.required}
+					id={this.props.ariaLabelledBy}
+					tag={this.props.tag}
 				/>
 				<div className="c-field__body">{this.props.children}</div>
 				{this.props.fieldNote && (
@@ -38,7 +40,9 @@ Field.propTypes = {
 	required: PropTypes.bool,
 	children: PropTypes.node,
 	ariaDescribedBy: PropTypes.string,
-	fieldNote: PropTypes.string
+	ariaLabelledBy: PropTypes.string,
+	fieldNote: PropTypes.string,
+	tag: PropTypes.string
 };
 
 Field.defaultProps = {

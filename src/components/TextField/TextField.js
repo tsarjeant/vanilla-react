@@ -75,6 +75,7 @@ export class TextField extends Component {
 				className={fieldClass}
 				id={this.props.id}
 				ariaDescribedBy={this.props.ariaDescribedBy}
+				ariaLabelledBy={this.props.ariaLabelledBy}
 				label={this.props.label}
 				hasError={this.props.hasError}
 				disabled={this.props.disabled}
@@ -91,6 +92,7 @@ export class TextField extends Component {
 					readOnly={this.props.readOnly}
 					required={this.props.required}
 					ariaDescribedBy={this.props.ariaDescribedBy}
+					ariaLabelledBy={this.props.ariaLabelledBy}
 					action={this.handleEmailChange}
 					blurAction={this.handleOnBlur}
 				/>
@@ -127,6 +129,7 @@ TextField.propTypes = {
 	placeholder: PropTypes.string,
 	readOnly: PropTypes.bool,
 	ariaDescribedBy: PropTypes.string,
+	ariaLabelledBy: PropTypes.string,
 	handleEmailChange: PropTypes.func,
 	handleOnBlur: PropTypes.func
 };
@@ -135,5 +138,6 @@ TextField.defaultProps = {
 	id: "text-field-1",
 	label: "Label",
 	fieldNote: "This is a fieldnote.",
-	ariaDescribedBy: "text-field"
+	ariaDescribedBy: "text-field-1",
+	ariaLabelledBy: "text-field-1-label"
 };

@@ -8,7 +8,7 @@ export class OptionList extends Component {
 
 	render() {
 		return (
-			<ul>
+			<ul className="c-option-list">
 				{this.props.listItems.map((listItem, index) => {
 					let boundItemChange = this.onItemChange.bind(
 						this,
@@ -19,6 +19,7 @@ export class OptionList extends Component {
 							className="c-option-list__item"
 							key={`option-list-item-${index}`}
 						>
+							{console.log(this.props.label)}
 							<label
 								className="c-input-group"
 								htmlFor={listItem.id}
@@ -33,6 +34,10 @@ export class OptionList extends Component {
 									disabled={listItem.disabled}
 									readOnly={listItem.readonly}
 									onChange={boundItemChange}
+									aria-describedby={
+										this.props.ariaDescribedBy
+									}
+									aria-labelledby={this.props.ariaLabelledBy}
 								/>
 								<span className="c-input-group__text">
 									{listItem.text}
@@ -54,7 +59,9 @@ OptionList.propTypes = {
 	disabled: PropTypes.bool,
 	readOnly: PropTypes.bool,
 	onChange: PropTypes.func,
-	text: PropTypes.string
+	text: PropTypes.string,
+	ariaDescribedBy: PropTypes.string,
+	ariaLabelledBy: PropTypes.string
 };
 
 OptionList.defaultProps = {

@@ -15,6 +15,7 @@ export class TextInput extends Component {
 				readOnly={this.props.readOnly}
 				required={this.props.required}
 				aria-describedby={this.props.ariaDescribedBy}
+				aria-labelledby={this.props.ariaLabelledBy}
 				onChange={this.props.action}
 				onBlur={this.props.blurAction}
 			/>
@@ -46,12 +47,12 @@ TextInput.propTypes = {
 	readOnly: PropTypes.bool,
 	required: PropTypes.bool,
 	ariaDescribedBy: PropTypes.string,
+	ariaLabelledBy: PropTypes.string,
 	onChange: PropTypes.func,
 	onBlur: PropTypes.func
 };
 
 TextInput.defaultProps = {
 	disabled: false,
-	placeholder: "Placeholder",
 	type: "text"
 };

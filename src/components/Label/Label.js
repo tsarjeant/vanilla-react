@@ -3,10 +3,12 @@ import PropTypes from "prop-types";
 
 export class Label extends Component {
 	render() {
+		const Label = this.props.tag;
 		return (
-			<label
+			<Label
 				className={`c-field__label ${this.props.className}`}
 				htmlFor={this.props.htmlFor}
+				id={this.props.id}
 			>
 				{this.props.labelText}
 				{this.props.required && (
@@ -14,7 +16,7 @@ export class Label extends Component {
 						*
 					</abbr>
 				)}
-			</label>
+			</Label>
 		);
 	}
 }
@@ -23,9 +25,11 @@ Label.propTypes = {
 	className: PropTypes.string,
 	htmlFor: PropTypes.string,
 	labelText: PropTypes.string,
-	required: PropTypes.bool
+	required: PropTypes.bool,
+	id: PropTypes.string
 };
 
 Label.defaultProps = {
-	labelText: "Label"
+	labelText: "Label",
+	tag: "label"
 };

@@ -27,11 +27,15 @@ export class SelectField extends Component {
 				required={this.props.required}
 				fieldNote={this.props.fieldNote}
 				title={this.props.title}
+				ariaDescribedBy={this.props.ariaDescribedBy}
+				ariaLabelledBy={this.props.ariaLabelledBy}
 			>
 				<Select
 					value={this.state.value}
 					changeAction={this.handleChange}
 					disabled={this.props.disabled}
+					ariaDescribedBy={this.props.ariaDescribedBy}
+					ariaLabelledBy={this.props.ariaLabelledBy}
 				/>
 			</Field>
 		);
@@ -41,11 +45,19 @@ export class SelectField extends Component {
 SelectField.propTypes = {
 	id: PropTypes.string,
 	label: PropTypes.string,
+	hasError: PropTypes.bool,
+	disabled: PropTypes.bool,
+	required: PropTypes.bool,
 	handleChange: PropTypes.func,
-	fieldNote: PropTypes.string
+	title: PropTypes.string,
+	fieldNote: PropTypes.string,
+	ariaDescribedBy: PropTypes.string,
+	ariaLabelledBy: PropTypes.string
 };
 
 SelectField.defaultProps = {
+	ariaDescribedBy: "select-field-1",
+	ariaLabelledBy: "select-field-1-label",
 	id: "select-field-1",
 	label: "Label",
 	fieldNote: "This is a fieldnote"
