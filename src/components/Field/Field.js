@@ -42,7 +42,7 @@ Field.propTypes = {
 };
 
 Field.defaultProps = {
-	id: "textarea-field-1",
+	id: "field-1",
 	label: "Label",
 	fieldNote: "This is a fieldnote."
 };
