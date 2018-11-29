@@ -5,7 +5,7 @@ export class Select extends Component {
 	render() {
 		return (
 			<select
-				className="c-select"
+				className="c-field__control"
 				id={this.props.id}
 				multiple={this.props.multiple}
 				disabled={this.props.disabled}

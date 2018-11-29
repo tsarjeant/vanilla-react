@@ -5,7 +5,7 @@ export class TextInput extends Component {
 	render() {
 		return (
 			<input
-				className="c-input"
+				className="c-field__control"
 				id={this.props.id}
 				name={this.props.name}
 				type={this.props.type}

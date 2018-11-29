@@ -5,7 +5,7 @@ export class Textarea extends Component {
 	render() {
 		return (
 			<textarea
-				className="c-input"
+				className="c-field__control"
 				id={this.props.id}
 				name={this.props.name}
 				placeholder={this.props.placeholder}

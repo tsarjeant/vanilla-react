@@ -39,3 +39,7 @@ stories.add("Default", () => (
 		]}
 	/>
 ));
+
+stories.add("Required", () => <SelectField required />);
+stories.add("Disabled", () => <SelectField disabled />);
+stories.add("Error", () => <SelectField hasError />);

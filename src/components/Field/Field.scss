@@ -37,6 +37,16 @@
 }
 
 /**
+ * Field control
+ * 1) Includes text input, textarea, and select
+ */
+.c-field__control {
+	.c-field.has-error & {
+		border-color: $color-utility-error;
+	}
+}
+
+/**
  * Field note
  */
 .c-field__note {

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { Select } from "../Select/Select";
+import { Field } from "../Field/Field";
 
 export class SelectField extends Component {
 	constructor(props) {
@@ -17,20 +18,22 @@ export class SelectField extends Component {
 
 	render() {
 		return (
-			<div className="c-field">
-				<label htmlFor={this.props.id} className="c-field__label">
-					{this.props.label}
-				</label>
-				<div className="c-field__body">
-					<Select
-						value={this.state.value}
-						changeAction={this.handleChange}
-					/>
-				</div>
-				{this.props.fieldNote && (
-					<div className="c-field__note">{this.props.fieldNote}</div>
-				)}
-			</div>
+			<Field
+				className="c-field"
+				id={this.props.id}
+				label={this.props.label}
+				hasError={this.props.hasError}
+				disabled={this.props.disabled}
+				required={this.props.required}
+				fieldNote={this.props.fieldNote}
+				title={this.props.title}
+			>
+				<Select
+					value={this.state.value}
+					changeAction={this.handleChange}
+					disabled={this.props.disabled}
+				/>
+			</Field>
 		);
 	}
 }
