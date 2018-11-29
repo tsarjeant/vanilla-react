@@ -15,7 +15,9 @@ stories.add("Default", () => (
 
 stories.add("Secondary", () => <Button issecondary text="Secondary Button" />);
 
-stories.add("Icon Before", () => <Button iconname="plus" text="Icon Before" />);
+stories.add("Icon Before", () => (
+	<Button iconname="plus" text={"Icon Before"} />
+));
 
 stories.add("Icon After", () => (
 	<Button iconnameafter="minus" text="Icon After" />

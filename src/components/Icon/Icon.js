@@ -1,12 +1,14 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-require.context("../../icons", true, /\.svg$/);
 import "./Icon.scss";
+
+//Looks for icon sprite in bundle.js or something
+require.context("../../icons", true, /\.svg$/);
 
 export class Icon extends Component {
 	render() {
 		return (
-			<svg className={`c-icon ${this.props.iconClass}`}>
+			<svg className={`c-icon ${this.props.iconclass}`}>
 				<use xlinkHref={`./icons.svg#${this.props.iconname}`} />
 			</svg>
 		);
@@ -14,11 +16,11 @@ export class Icon extends Component {
 }
 
 Icon.propTypes = {
-	iconClass: PropTypes.string,
+	iconclass: PropTypes.string,
 	iconname: PropTypes.string.isRequired
 };
 
 Icon.defaultProps = {
-	iconClass: "c-icon",
+	iconclass: "c-icon",
 	iconname: "search"
 };

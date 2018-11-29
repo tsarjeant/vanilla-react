@@ -19,7 +19,7 @@ export class Button extends Component {
 				{this.props.iconname && (
 					<Icon
 						iconname={this.props.iconname}
-						iconClass={this.props.iconClass}
+						iconclass={this.props.iconclass}
 					/>
 				)}
 				{this.props.text && (
@@ -28,7 +28,7 @@ export class Button extends Component {
 				{this.props.iconnameafter && (
 					<Icon
 						iconname={this.props.iconnameafter}
-						iconClass={this.props.iconClass}
+						iconclass={this.props.iconclass}
 					/>
 				)}
 			</button>
@@ -40,8 +40,8 @@ Button.propTypes = {
 	btnClass: PropTypes.string,
 	issecondary: PropTypes.bool,
 	disabled: PropTypes.bool,
-	text: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
-	iconClass: PropTypes.string,
+	text: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
+	iconclass: PropTypes.string,
 	iconname: PropTypes.string,
 	iconnameafter: PropTypes.string
 };
@@ -49,5 +49,5 @@ Button.propTypes = {
 Button.defaultProps = {
 	disabled: false,
 	text: "Button",
-	iconClass: "c-btn__icon"
+	iconclass: "c-btn__icon"
 };

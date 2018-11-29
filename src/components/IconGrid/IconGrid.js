@@ -26,7 +26,7 @@ export class IconGrid extends Component {
 }
 
 IconGrid.propTypes = {
-	iconClass: PropTypes.string,
+	iconclass: PropTypes.string,
 	iconname: PropTypes.string,
 	listItems: PropTypes.array
 };
