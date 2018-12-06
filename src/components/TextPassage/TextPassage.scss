@@ -1,4 +1,5 @@
 @import "../../css/scss/abstracts/variables.scss";
+@import "../../css/scss/abstracts/style-params.scss";
 
 /*------------------------------------*\
     #TEXT PASSAGE
@@ -8,89 +9,89 @@
  * 1) A passage of text, including various components (i.e. article, blog post)
  */
 .c-text-passage {
-	p {
-		margin-bottom: 1rem;
-	}
+    p {
+        margin-bottom: 1rem;
+    }
 
-	/**
+    /**
 	 * Link within the text passage
 	 */
-	a {
-		text-decoration: underline;
-	}
+    a {
+        text-decoration: underline;
+    }
 
-	/**
+    /**
 	  * First-level heading within text passage
 	  */
-	h1 {
-		margin-bottom: 1rem;
-	}
+    h1 {
+        margin-bottom: 1rem;
+    }
 
-	/**
+    /**
 	 * Second-level heading within text passage
 	 */
-	h2 {
-		margin: 1rem 0 1rem;
-		color: $color-neutral-gray-73;
-		font-weight: bold;
-	}
+    h2 {
+        margin: 1rem 0 1rem;
+        color: $color-neutral-gray-73;
+        font-weight: bold;
+    }
 
-	/**
+    /**
 	 * Third-level heading within text passage
 	 */
-	h3 {
-		margin: 1rem 0 1rem;
-	}
+    h3 {
+        margin: 1rem 0 1rem;
+    }
 
-	/**
+    /**
 	 * Fourth-level heading within text passage
 	 */
-	h4 {
-		margin: 1rem 0 1rem;
-	}
+    h4 {
+        margin: 1rem 0 1rem;
+    }
 
-	/**
+    /**
 	 * Fifth-level heading within text passage
 	 */
-	h5 {
-		margin: 1rem 0 1rem;
-	}
+    h5 {
+        margin: 1rem 0 1rem;
+    }
 
-	/**
+    /**
 	 * Sixth-level heading within text passage
 	 */
-	h6 {
-		margin: 1rem 0 1rem;
-	}
+    h6 {
+        margin: 1rem 0 1rem;
+    }
 
-	/**
+    /**
 	 * Unordered list within text passage
 	 */
-	ul {
-		list-style: disc;
-		margin-left: 1rem;
-		margin-bottom: 1rem;
+    ul {
+        list-style: disc;
+        margin-left: 1rem;
+        margin-bottom: 1rem;
 
-		li:last-child {
-			margin-bottom: 0;
-		}
-	}
+        li:last-child {
+            margin-bottom: 0;
+        }
+    }
 
-	/**
+    /**
 	 * Ordered list within text passage
 	 */
-	ol {
-		list-style: decimal;
-		margin-left: 1rem;
-		margin-bottom: 1rem;
+    ol {
+        list-style: decimal;
+        margin-left: 1rem;
+        margin-bottom: 1rem;
 
-		li:last-child {
-			margin-bottom: 0;
-		}
-	}
+        li:last-child {
+            margin-bottom: 0;
+        }
+    }
 
-	li {
-		margin-bottom: 0.5rem;
-		line-height: 1.6;
-	}
+    li {
+        margin-bottom: 0.5rem;
+        line-height: 1.6;
+    }
 }

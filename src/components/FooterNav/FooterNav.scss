@@ -1,4 +1,5 @@
 @import "../../css/scss/abstracts/variables.scss";
+@import "../../css/scss/abstracts/style-params.scss";
 
 /*------------------------------------*\
     #FOOTER NAV
@@ -11,5 +12,5 @@
 }
 
 .c-footer-nav__link {
-	color: $color-neutral-white;
+    color: $color-neutral-white;
 }

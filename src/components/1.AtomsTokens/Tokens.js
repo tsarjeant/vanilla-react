@@ -13,17 +13,7 @@ export class Tokens extends Component {
     render() {
         return (
             <React.Fragment>
-                <Section title="Brand Colors">
-                    <Colors listItems={brandColors.items} />
-                </Section>
-
-                <Section title="Neutral Colors">
-                    <Colors listItems={neutralColors.items} />
-                </Section>
-
-                <Section title="Utility Colors">
-                    <Colors listItems={utilityColors.items} />
-                </Section>
+                <Colors />
 
                 <Section title="Font Families">
                     <FontFamilies />

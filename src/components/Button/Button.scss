@@ -1,3 +1,6 @@
+@import "../../css/scss/abstracts/variables.scss";
+@import "../../css/scss/abstracts/style-params.scss";
+
 /*------------------------------------*\
     #BUTTON
 \*------------------------------------*/
@@ -6,10 +9,10 @@
  * 1) Button or link that has functionality to it
  */
 .c-btn {
-	display: flex;
-	background: #333;
-	color: #fff;
-	border: 0;
+    display: flex;
+    background: $color-brand-blue;
+    color: $color-neutral-white;
+    border: 0;
 }
 
 /**
@@ -17,19 +20,19 @@
  * 1) Different button style 
  */
 .c-btn--secondary {
-	background: #eee;
-	color: #222;
-	border: 1px solid #eee;
+    background: $color-neutral-gray-07;
+    color: $color-neutral-gray-93;
+    border: 1px solid $color-neutral-gray-07;
 }
 
 .c-btn__icon {
-	fill: #fff;
+    fill: $color-neutral-white;
 }
 
 .c-btn__text + .c-btn__icon {
-	margin-left: 0.5rem;
+    margin-left: 0.5rem;
 }
 
 .c-btn__icon + .c-btn__text {
-	margin-left: 0.5rem;
+    margin-left: 0.5rem;
 }
