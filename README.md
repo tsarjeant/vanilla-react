@@ -56,8 +56,6 @@ stories.add("Default", () => (
 ));
 ```
 
-**Button.css** is plain CSS, but will automatically be loaded when the component is used.
-
 ### Run Storybook
 
 ```bash
