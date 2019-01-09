@@ -1,12 +1,10 @@
 # Vanilla React
 
-Vanilla React is a starter kit.
-
-# React w/ Storybook Starter
-
-This repo is a combination of [Create React App](https://github.com/facebook/create-react-app) and the [Storybook CLI](https://github.com/storybooks/storybook#getting-started).
+Vanilla React is a barebones UI starter kit that uses [Create React App](https://github.com/facebook/create-react-app) and [Storybook](https://storybook.js.org/).
 
 ## Using This Repo
+
+To get started, type the following commands into the terminal:
 
 -   `git clone https://github.com/bradfrost/vanilla-react.git && cd vanilla-react`
 -   `npm install`
@@ -18,13 +16,14 @@ Start building in the `src/components` folder with this folder structure:
 
 ```
 - ComponentName
-- ComponentName.stories.js
-- ComponentName.js;
+  - ComponentName.js
+  - ComponentName.scss
+  - ComponentName.stories.js
 ```
 
-Create `src/components/Button` and add `Button.css`, `Button.js` and `Button.stories.js`
+For instance, create `src/components/Button` and add `Button.scss`, `Button.js` and `Button.stories.js`
 
-**Button.js** will be:
+**Button.js** will be something along the lines of:
 
 ```js
 import React, { Component } from "react";
@@ -34,8 +33,7 @@ export class Button extends Component {
     render() {
         return (
             <button className="Button" {...this.props}>
-                {" "}
-                {this.props.children}{" "}
+                {this.props.children}
             </button>
         );
     }
@@ -62,11 +60,7 @@ stories.add("Default", () => (
 npm run storybook
 ```
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
+## Create React Scripts
 
 ### `npm start`
 
