@@ -41,7 +41,9 @@
  * Brand Colors
  * 1) Brand=specific colors
  */
-$color-brand-blue: #0000ff;
+$color-brand-primary: #0C8383;
+$color-brand-secondary: #5DA33D;
+$color-brand-tertiary: #FF5050;
 
 /**
  * Neutral Colors
@@ -63,14 +65,14 @@ $color-neutral-black: #000;
  * 1) Utility colors are colors used to provide feedback, such as alert messages,
  *    form validation, etc.
  */
-$color-utility-info: #0192d0;
-$color-utility-info-light: #d3f2ff;
-$color-utility-error: #b12a0b;
-$color-utility-error-light: #fdded8;
-$color-utility-success: #03804d;
-$color-utility-success-light: #d4f3e6;
-$color-utility-warning: #a59b15;
-$color-utility-warning-light: #fffecf;
+$color-utility-info: #0192d0; //still need to create these
+$color-utility-info-light: #d3f2ff; //still need to create these
+$color-utility-error: #4C132D;
+$color-utility-error-light: #FF7171;
+$color-utility-success: #2E5528;
+$color-utility-success-light: #A2D882;
+$color-utility-warning: #856404;
+$color-utility-warning-light: #FFF3CD;
 
 /*------------------------------------*\
     #TYPOGRAPHY
